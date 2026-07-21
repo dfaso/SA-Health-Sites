@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SA Health Sites Map</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <style>
+
+        /* ==================================================
+           PAGE
+        ================================================== */
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: #f2f2f2;
+        }
+
+
+        /* ==================================================
+           HEADER
+        ================================================== */
+
+        .main-header {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+
+            box-sizing: border-box;
+
+            padding: 0 22px;
+
+            background-color: #005eb8;
+            color: white;
+
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+            position: relative;
+            z-index: 2000;
+        }
+
+        .main-header h1 {
+            margin: 0;
+
+            font-size: 24px;
+        }
+
+        .main-header p {
+            margin: 4px 0 0;
+
+            font-size: 13px;
+        }
+
+
+        /* ==================================================
+           APPLICATION LAYOUT
+        ================================================== */
+
+        .app-container {
+            position: relative;
+
+            display: flex;
+
+            min-height: calc(100vh - 70px);
+        }
+
+
+        /* ==================================================
+           SIDEBAR
+        ================================================== */
+
+        .sidebar {
+            width: 300px;
+            min-width: 300px;
+
+            box-sizing: border-box;
+
+            background-color: white;
+            border-right: 1px solid #cccccc;
+
+            transition:
+                width 0.3s ease,
+                min-width 0.3s ease;
+
+            position: relative;
+            z-index: 1500;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            min-width: 0;
+
+            border-right: none;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+
+            box-sizing: border-box;
+
+            overflow: hidden;
+
+            transition:
+                opacity 0.2s ease,
+                visibility 0.2s ease;
+        }
+
+        .sidebar.collapsed .sidebar-content {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .sidebar h2 {
+            margin: 0 0 18px;
+
+            font-size: 20px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 18px;
+            padding: 14px;
+
+            background-color: #f4f6f8;
+
+            border: 1px solid #d6dce1;
+            border-radius: 6px;
+        }
+
+        .sidebar-section h3 {
+            margin: 0 0 10px;
+
+            font-size: 15px;
+            color: #005eb8;
+        }
+
+        .sidebar-section p {
+            margin: 0;
+
+            font-size: 13px;
+            line-height: 1.5;
+
+            color: #444444;
+        }
+
+        .sidebar-section label {
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .sidebar-section input,
+        .sidebar-section select {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 9px;
+
+            border: 1px solid #b8bec4;
+            border-radius: 4px;
+
+            background-color: white;
+
+            font-size: 14px;
+        }
+
+        .sidebar-section button {
+            width: 100%;
+
+            padding: 10px;
+
+            border: none;
+            border-radius: 4px;
+
+            background-color: #005eb8;
+            color: white;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        .sidebar-section button:hover {
+            background-color: #004a92;
+        }
+
+
+        /* ==================================================
+           SIDEBAR TOGGLE
+        ================================================== */
+
+        .sidebar-toggle {
+            position: absolute;
+
+            top: 20px;
+            left: 300px;
+
+            width: 38px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0;
+
+            border: 1px solid #aaaaaa;
+            border-left: none;
+            border-radius: 0 6px 6px 0;
+
+            background-color: white;
+            color: #005eb8;
+
+            font-size: 21px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.18);
+
+            transition:
+                left 0.3s ease,
+                background-color 0.2s ease;
+
+            z-index: 1600;
+        }
+
+        .sidebar-toggle:hover {
+            background-color: #eeeeee;
+        }
+
+        .sidebar.collapsed + .sidebar-toggle {
+            left: 0;
+        }
+
+
+        /* ==================================================
+           MAP AREA
+
+           This area fills the space beside the sidebar.
+        ================================================== */
+
+        .map-area {
+            flex: 1;
+
+            min-width: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            box-sizing: border-box;
+
+            padding: 25px;
+        }
+
+
+        /* ==================================================
+           MAP FRAME
+
+           Change the width and height here during
+           development.
+        ================================================== */
+
+        .map-frame {
+            width: 1800px;
+            height: 850px;
+
+            max-width: 100%;
+
+            position: relative;
+            flex-shrink: 0;
+
+            overflow: hidden;
+
+            border: 2px solid #b5b5b5;
+            border-radius: 6px;
+
+            background-color: white;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ==================================================
+           LEAFLET MAP
+        ================================================== */
+
+        #map {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+        }
+
+
+        /* ==================================================
+           SMALL SCREENS
+        ================================================== */
+
+        @media (max-width: 700px) {
+
+            .main-header {
+                height: 60px;
+
+                padding: 0 14px;
+            }
+
+            .main-header h1 {
+                font-size: 19px;
+            }
+
+            .main-header p {
+                display: none;
+            }
+
+            .app-container {
+                min-height: calc(100vh - 60px);
+            }
+
+            .sidebar {
+                position: absolute;
+
+                top: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 280px;
+                min-width: 280px;
+
+                box-shadow: 3px 0 8px rgba(0, 0, 0, 0.25);
+            }
+
+            .sidebar.collapsed {
+                width: 0;
+                min-width: 0;
+            }
+
+            .sidebar-toggle {
+                left: 280px;
+            }
+
+            .sidebar.collapsed + .sidebar-toggle {
+                left: 0;
+            }
+
+            .map-area {
+                padding: 15px;
+            }
+
+            .map-frame {
+                width: 100%;
+                height: 600px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="main-header">
+
+        <div>
+            <h1>SA Health Sites Map</h1>
+
+            <p>
+                Health sites and service locations
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         APPLICATION
+    =================================================== -->
+
+    <main class="app-container">
+
+        <!-- Sidebar -->
+        <aside
+            id="sidebar"
+            class="sidebar"
+            aria-label="Map controls"
+        >
+
+            <div class="sidebar-content">
+
+                <h2>Map Controls</h2>
+
+
+                <div class="sidebar-section">
+
+                    <h3>Search</h3>
+
+                    <label for="siteSearch">
+                        Search for a site
+                    </label>
+
+                    <input
+                        type="text"
+                        id="siteSearch"
+                        placeholder="Enter a site name"
+                    >
+
+                </div>
+
+
+                <div class="sidebar-section">
+
+                    <h3>Local Health Network</h3>
+
+                    <label for="lhnSelect">
+                        Select an LHN
+                    </label>
+
+                    <select id="lhnSelect">
+
+                        <option value="">
+                            All Local Health Networks
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="sidebar-section">
+
+                    <h3>Site Type</h3>
+
+                    <label for="siteTypeSelect">
+                        Select a site type
+                    </label>
+
+                    <select id="siteTypeSelect">
+
+                        <option value="">
+                            All site types
+                        </option>
+
+                        <option value="hospital">
+                            Hospitals
+                        </option>
+
+                        <option value="ambulance">
+                            Ambulance sites
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="sidebar-section">
+
+                    <h3>Information</h3>
+
+                    <p>
+                        Future filters, selected-site information and map
+                        tools can be displayed in this sidebar.
+                    </p>
+
+                </div>
+
+
+                <div class="sidebar-section">
+
+                    <button
+                        id="resetMapButton"
+                        type="button"
+                    >
+                        Reset Map
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Sidebar toggle -->
+        <button
+            id="sidebarToggle"
+            class="sidebar-toggle"
+            type="button"
+            aria-label="Collapse sidebar"
+            aria-expanded="true"
+        >
+            &#10094;
+        </button>
+
+
+        <!-- Map area -->
+        <section class="map-area">
+
+            <div class="map-frame">
+
+                <div id="map"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <script>
+
+        // ==================================================
+        // DEFAULT MAP VIEW
+        // ==================================================
+
+        const defaultMapCentre = [-30.5, 135.5];
+        const defaultMapZoom = 6;
+
+
+        // ==================================================
+        // CREATE MAP
+        //
+        // No maximum bounds are applied.
+        // The standard Leaflet zoom control is disabled.
+        // ==================================================
+
+        const map = L.map("map", {
+
+            center: defaultMapCentre,
+
+            zoom: defaultMapZoom,
+
+            minZoom: 2,
+            maxZoom: 19,
+
+            zoomControl: false
+
+        });
+
+
+        // ==================================================
+        // BASE MAPS
+        // ==================================================
+
+        const cartoLight = L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            {
+                subdomains: "abcd",
+
+                maxZoom: 20,
+
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">' +
+                    "OpenStreetMap contributors</a> " +
+                    '&copy; <a href="https://carto.com/attributions">' +
+                    "CARTO</a>"
+            }
+        );
+
+
+        const openStreetMap = L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {
+                maxZoom: 19,
+
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">' +
+                    "OpenStreetMap contributors</a>"
+            }
+        );
+
+
+        const esriSatellite = L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/" +
+            "World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            {
+                maxZoom: 19,
+
+                attribution:
+                    "Tiles &copy; Esri and contributors"
+            }
+        );
+
+
+        // ==================================================
+        // DEFAULT BASE MAP
+        // ==================================================
+
+        openStreetMap.addTo(map);
+
+
+        // ==================================================
+        // FUTURE OVERLAY LAYERS
+        // ==================================================
+
+        const lhnLayer = L.geoJSON(null, {
+            style: {
+                color: "#005EB8",
+                weight: 2,
+                fillColor: "#005EB8",
+                fillOpacity: 0.15
+            },
+
+            onEachFeature: function (feature, layer) {
+
+                const p = feature.properties || {};
+
+                layer.bindTooltip(
+                    p.name || p.LHN || "Local Health Network",
+                    {
+                        sticky: true
+                    }
+                );
+
+            }
+
+        }).addTo(map);
+
+        const hospitalLayer =
+            L.layerGroup().addTo(map);
+
+        const ambulanceLayer =
+            L.layerGroup().addTo(map);
+
+            
+        //==================================================
+        // LOAD LHN FROM GITHUB
+        //==================================================
+
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/LHN.geojson")
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                lhnLayer.addData(data);
+
+                map.fitBounds(lhnLayer.getBounds(), {
+                    padding: [20, 20]
+                });
+
+            })
+
+            .catch(error => {
+
+                console.error("Unable to load LHN layer:", error);
+
+            });
+
+
+        // ==================================================
+        // LAYER CONTROL
+        // ==================================================
+
+        const baseMaps = {
+
+            "Light Map": cartoLight,
+
+            "OpenStreetMap": openStreetMap,
+
+            "Satellite": esriSatellite
+
+        };
+
+
+        const overlayMaps = {
+
+            "Local Health Networks": lhnLayer,
+
+            "Hospitals": hospitalLayer,
+
+            "Ambulance Sites": ambulanceLayer
+
+        };
+
+
+        L.control.layers(
+            baseMaps,
+            overlayMaps,
+            {
+                collapsed: false,
+                position: "topright"
+            }
+        ).addTo(map);
+
+
+        // ==================================================
+        // SCALE
+        // ==================================================
+
+        L.control.scale({
+
+            metric: true,
+
+            imperial: false,
+
+            position: "bottomleft"
+
+        }).addTo(map);
+
+
+        // ==================================================
+        // RESET MAP
+        // ==================================================
+
+        function resetMapView() {
+
+            map.setView(
+                defaultMapCentre,
+                defaultMapZoom
+            );
+
+        }
+
+
+        // ==================================================
+        // SIDEBAR
+        // ==================================================
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        const sidebarToggle =
+            document.getElementById("sidebarToggle");
+
+
+        sidebarToggle.addEventListener("click", function () {
+
+            const isCollapsed =
+                sidebar.classList.toggle("collapsed");
+
+
+            if (isCollapsed) {
+
+                sidebarToggle.innerHTML = "&#10095;";
+
+                sidebarToggle.setAttribute(
+                    "aria-label",
+                    "Expand sidebar"
+                );
+
+                sidebarToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            } else {
+
+                sidebarToggle.innerHTML = "&#10094;";
+
+                sidebarToggle.setAttribute(
+                    "aria-label",
+                    "Collapse sidebar"
+                );
+
+                sidebarToggle.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+
+            /*
+             * Wait until the CSS sidebar transition finishes,
+             * then tell Leaflet to recalculate the map size.
+             */
+
+            setTimeout(function () {
+
+                map.invalidateSize(true);
+
+            }, 320);
+
+        });
+
+
+        // ==================================================
+        // RESET BUTTON
+        // ==================================================
+
+        document
+            .getElementById("resetMapButton")
+            .addEventListener("click", function () {
+
+                resetMapView();
+
+            });
+
+
+        // ==================================================
+        // INITIAL MAP SIZE CORRECTION
+        // ==================================================
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                map.invalidateSize(true);
+
+                resetMapView();
+
+            }, 300);
+
+        });
+
+
+        // ==================================================
+        // BROWSER WINDOW RESIZING
+        // ==================================================
+
+        window.addEventListener("resize", function () {
+
+            map.invalidateSize(true);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
