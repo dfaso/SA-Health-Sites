@@ -1,0 +1,143 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Umuwa Administration Office",
+        "type": "Administration Office",
+        "organisation": "Nganampa Health Council",
+        "community": "Umuwa",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.040981, -26.465897]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alice Springs Administration Office",
+        "type": "Administration Office",
+        "organisation": "Nganampa Health Council",
+        "community": "Alice Springs",
+        "lhn": "External",
+        "state": "NT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.870906, -23.700428]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Iwantja Clinic",
+        "alternate_name": "Indulkana",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Iwantja",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.309696, -26.964958]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mimili Clinic",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Mimili",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.708098, -27.006570]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fregon Clinic",
+        "alternate_name": "Aparawatatja",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Fregon",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.027587, -26.763384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pukatja Clinic",
+        "alternate_name": "Ernabella",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Pukatja",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.129369, -26.287577]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amata Clinic",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Amata",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.1466070, -26.151286]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pipalyatjara Clinic",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Pipalyatjara",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.171375, -26.161746]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nyapari Clinic",
+        "type": "Aboriginal Health Clinic",
+        "organisation": "Nganampa Health Council",
+        "community": "Nyapari",
+        "lhn": "Aboriginal Health",
+        "state": "SA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.221189, -26.174230]
+      }
+    }
+  ]
+}
