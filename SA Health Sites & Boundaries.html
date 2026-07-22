@@ -719,9 +719,40 @@
             onEachFeature: function (feature, layer) {
                 const p = feature.properties || {};
                 layer.bindTooltip(
-                    `<strong>${p.facility_name}</strong><br>
+                    `<strong>SAAS - ${p.facility_name}</strong><br>
                     ${p.facility_address},<br>
                     ${p.abs_suburb}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+                });
+            }
+        }).addTo(map);
+
+                const dental = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#014CC6",
+                    fillOpacity: 1
+                });
+            },
+
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                    `<strong>${p.service} - ${p.name}</strong><br>
+                    ${p.address},<br>
+                    ${p.suburb}`,
                     {
                         sticky: true
                     }
@@ -856,9 +887,17 @@
                 console.error("Unable to load Nganampa Health layer:", error);
             });
 
-        // ==================================================
-        // LAYER CONTROL
-        // ==================================================
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SADS.geojson")
+            .then(response => response.json())
+            .then(data => {
+                dental.addData(data);
+                map.fitBounds(dental.getBounds(), {
+                    padding: [20, 20]
+                });
+            })
+            .catch(error => {
+                console.error("Unable to load SA Dental layer:", error);
+            });
 
 // ==================================================
 // LAYER CONTROL
@@ -880,6 +919,7 @@
                 "Health Sites": {
                     "Hospitals": hospital,
                     "Ambulance Sites": SAAS,
+                    "SA Dental": dental,
                     "Nganampa Health": nganampa
                 }
 
