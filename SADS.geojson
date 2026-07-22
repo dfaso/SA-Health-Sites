@@ -1,0 +1,605 @@
+{
+  "type": "FeatureCollection",
+  "name": "SA_Dental_Sites",
+  "metadata": {
+    "source": "SA Dental clinic finder",
+    "source_url": "https://www.dental.sa.gov.au/find-a-clinic",
+    "prepared_date": "2026-07-21"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adelaide Dental Hospital",
+        "site_type": "Specialist dental hospital",
+        "service": "SA Dental",
+        "address": "Corner of North Terrace and George Street",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "phone": "1300 008 222",
+        "status": "Operating",
+        "notes": "Referral only"
+      },
+      "geometry":{ 
+        "type": "Point",
+        "coordinates": [138.591268, -34.921506]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Angle Park (Parks)",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Parks Community Dental Clinic, 2/40-44 Trafford Street",
+        "suburb": "Angle Park",
+        "postcode": "5010",
+        "phone": "(08) 8243 5629",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.557060, -34.858918]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elizabeth GP Plus",
+        "site_type": "GP Plus dental clinic",
+        "service": "SA Dental",
+        "address": "16 Playford Boulevard",
+        "suburb": "Elizabeth",
+        "postcode": "5112",
+        "phone": "(08) 7485 4269",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.6710785, -34.716801]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Evanston",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "20 Para Road",
+        "suburb": "Evanston",
+        "postcode": "5116",
+        "phone": "(08) 7485 4269",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.734003, -34.616081]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fulham Gardens",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Mitton Avenue",
+        "suburb": "Henley Beach",
+        "postcode": "5022",
+        "phone": "(08) 7117 4000",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.504169, -34.912610]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gawler",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Gawler Health Service, 21 Hutchinson Road",
+        "suburb": "Gawler East",
+        "postcode": "5118",
+        "phone": "(08) 7485 4269",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.755161, -34.593246]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gilles Plains",
+        "site_type": "Adult dental clinic",
+        "service": "SA Dental",
+        "address": "TAFE SA, 33 Blacks Road",
+        "suburb": "Gilles Plains",
+        "postcode": "5086",
+        "phone": "(08) 8207 1222",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.653039, -34.851852]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hendon",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "162 Cedar Avenue",
+        "suburb": "Royal Park",
+        "postcode": "5014",
+        "phone": "(08) 7117 4000",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.510869, -34.878818]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Linden Park",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "5 Highfield Avenue",
+        "suburb": "St Georges",
+        "postcode": "5064",
+        "phone": "(08) 7425 8850",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.644555, -34.948206]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Magill",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Magill Primary School",
+        "suburb": "Magill",
+        "postcode": "5072",
+        "phone": "(08) 7425 8850",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.679206, -34.913917]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marion GP Plus",
+        "site_type": "GP Plus dental clinic",
+        "service": "SA Dental",
+        "address": "Level 1, 10 Milham Street",
+        "suburb": "Oaklands Park",
+        "postcode": "5046",
+        "phone": "(08) 7425 8400",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.542127, -35.013270]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marleston",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "229B Marion Road",
+        "suburb": "Marleston",
+        "postcode": "5033",
+        "phone": "(08) 7117 4000",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.554218, -34.945034]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Millicent",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "17 Ninth Street",
+        "suburb": "Millicent",
+        "postcode": "5280",
+        "phone": "(08) 8733 3957",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [140.342106, -37.593187]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mitcham",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Mitcham Primary School, Elphyn Road",
+        "suburb": "Kingswood",
+        "postcode": "5062",
+        "phone": "(08) 7425 8400",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.616272, -34.972971]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modbury GP Plus",
+        "site_type": "GP Plus dental clinic",
+        "service": "SA Dental",
+        "address": "77 Smart Road",
+        "suburb": "Modbury",
+        "postcode": "5092",
+        "phone": "(08) 7425 8700",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.692326, -34.833645]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Barker - Kids",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Mount Barker Primary School, 2A Dumas Street",
+        "suburb": "Mount Barker",
+        "postcode": "5251",
+        "phone": "(08) 7117 4490",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.853460, -35.067006]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Barker - Adults",
+        "site_type": "Adult dental clinic",
+        "service": "SA Dental",
+        "address": "Mount Barker District Soldiers' Memorial Hospital, 87 Wellington Road",
+        "suburb": "Mount Barker",
+        "postcode": "5251",
+        "phone": "(08) 7117 4490",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.869940, -35.080352]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Gambier",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Mount Gambier and Districts Health Service, 276-300 Wehl Street North",
+        "suburb": "Mount Gambier",
+        "postcode": "5290",
+        "phone": "(08) 8721 1633",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [140.785977, -37.805057]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murray Bridge",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "45 Beatty Terrace",
+        "suburb": "Murray Bridge",
+        "postcode": "5253",
+        "phone": "(08) 7117 4490",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [139.279894, -35.127825]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Naracoorte",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Naracoorte Primary School, 41 Park Terrace",
+        "suburb": "Naracoorte",
+        "postcode": "5271",
+        "phone": "(08) 8762 2614",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [140.737856, -36.951334]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Noarlunga GP Plus",
+        "site_type": "GP Plus dental clinic",
+        "service": "SA Dental",
+        "address": "2 Alexander Kelly Drive",
+        "suburb": "Noarlunga Centre",
+        "postcode": "5168",
+        "phone": "(08) 8384 9244",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.497397, -35.139045]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pennington",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Pennington Primary School, Butler Avenue",
+        "suburb": "Pennington",
+        "postcode": "5013",
+        "phone": "(08) 8243 5629",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.532721, -34.857075]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Adelaide",
+        "site_type": "Adult dental clinic",
+        "service": "SA Dental",
+        "address": "Wonggangga Turtpandi Aboriginal Primary Health Care Services, 11 Church Street",
+        "suburb": "Port Adelaide",
+        "postcode": "5015",
+        "phone": "(08) 8243 5629",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.502760, -34.846841]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Augusta",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Flinders and Far North Community Health Service, 36 Flinders Terrace",
+        "suburb": "Port Augusta",
+        "postcode": "5700",
+        "phone": "(08) 8668 7840",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [137.765412, -32.493171]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Lincoln",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "39 Oxford Terrace",
+        "suburb": "Port Lincoln",
+        "postcode": "5606",
+        "phone": "(08) 7669 1700",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [135.850294, -34.724224]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Pirie",
+        "site_type": "Adult dental clinic",
+        "service": "SA Dental",
+        "address": "Port Pirie Regional Health Service, The Terrace",
+        "suburb": "Port Pirie",
+        "postcode": "5540",
+        "phone": "(08) 8638 4426",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.004454, -33.177029]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Pirie West",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Port Pirie West Primary School, 214 The Terrace",
+        "suburb": "Port Pirie West",
+        "postcode": "5540",
+        "phone": "(08) 8632 1926",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.002973, -33.181384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prospect",
+        "site_type": "Kids dental clinic",
+        "service": "SA Dental",
+        "address": "Prospect Primary School, Burrage Place",
+        "suburb": "Prospect",
+        "postcode": "5082",
+        "phone": "(08) 7117 4000",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.590791, -34.884427]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverland (Berri)",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "10 Maddern Avenue",
+        "suburb": "Berri",
+        "postcode": "5343",
+        "phone": "(08) 8580 2700",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [140.601086, -34.275874] 
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salisbury",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "21 Hollywood Boulevard",
+        "suburb": "Salisbury Downs",
+        "postcode": "5108",
+        "phone": "(08) 7485 4700",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.623651, -34.768976]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Victor Harbor",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "South Coast District Hospital, Bay Road",
+        "suburb": "Victor Harbor",
+        "postcode": "5211",
+        "phone": "(08) 8551 0460",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [138.607391, -35.560858]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wallaroo",
+        "site_type": "Community dental clinic",
+        "service": "SA Dental",
+        "address": "Wallaroo Hospital and Health Services, 1 Ernest Terrace",
+        "suburb": "Wallaroo",
+        "postcode": "5556",
+        "phone": "(08) 7117 4492",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [137.636632, -33.928552]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whyalla",
+        "site_type": "Oral health centre",
+        "service": "SA Dental",
+        "address": "Whyalla Oral Health Centre, 111 Nicolson Avenue",
+        "suburb": "Whyalla Norrie",
+        "postcode": "5608",
+        "phone": "(08) 7117 4493",
+        "status": "Operating",
+        "notes": ""
+      },
+      "geometry": { 
+        "type": "Point",
+        "coordinates": [137.546723, -33.029228]
+      }
+    }
+  ]
+}
