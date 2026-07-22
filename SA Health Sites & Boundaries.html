@@ -622,7 +622,8 @@
                 const p = feature.properties || {};
                 layer.bindTooltip(
                     `<strong>${p.name}</strong><br>
-                    ${p.address}, ${p.suburb}`,
+                    ${p.address},<br>
+                    ${p.suburb}`,
                     {
                         sticky: true
                     }
@@ -636,7 +637,38 @@
             }
         }).addTo(map);
 
-        const SAAS = L.geoJSON(null, {
+        const nganampa = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#ff365e",
+                    fillOpacity: 1
+                });
+            },
+
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                `Name: <strong>${p.name}</strong><br>
+                Community: ${p.community}<br>
+                Organisation: ${p.organisation}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+                });
+            }
+        }).addTo(map);
+
+                const SAAS = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, {
                     pane: "sitePane",
@@ -652,7 +684,8 @@
                 const p = feature.properties || {};
                 layer.bindTooltip(
                     `<strong>${p.facility_name}</strong><br>
-                    ${p.facility_address}, ${p.abs_suburb}`,
+                    ${p.facility_address},<br>
+                    ${p.abs_suburb}`,
                     {
                         sticky: true
                     }
@@ -706,8 +739,7 @@
             onEachFeature: function (feature, layer) {
                 const p = feature.properties || {};
                 layer.bindTooltip(
-                    `<strong>${p.lhn}</strong><br>
-                    ${p.lhn_code}`,
+                    `<strong>${p.abb_name}</strong>`,
                     {
                         sticky: true
                     }
@@ -788,6 +820,21 @@
                 console.error("Unable to load APY layer:", error);
             });
 
+                    //==================================================
+        // LOAD nganampa FROM GITHUB
+        //==================================================
+
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/Nganampa_Health.geojson")
+            .then(response => response.json())
+            .then(data => {
+                nganampa.addData(data);
+                map.fitBounds(nganampa.getBounds(), {
+                    padding: [20, 20]
+                });
+            })
+            .catch(error => {
+                console.error("Unable to load Nganampa Health layer:", error);
+            });
 
         // ==================================================
         // LAYER CONTROL
@@ -803,7 +850,8 @@
             "Hospitals": hospital,
             "Ambulance Sites": SAAS,
             "Local Health Networks": lhnLayer,
-            "APY Lands":APY
+            "APY Lands":APY,
+            "Nganampa Health":nganampa
         };
 
         L.control.layers(
