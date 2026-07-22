@@ -10,6 +10,8 @@
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.css"
+>
 
     <style>
         /* ==================================================
@@ -514,6 +516,7 @@
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.js"></script>
 
 
     <script>
@@ -590,6 +593,39 @@
             }
         );
 
+        // ==================================================
+        // ICONS
+        // ==================================================
+
+            const icons = {
+
+                dental: L.icon({
+                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/dental.png",
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                }),
+
+                hospital: L.icon({
+                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/hospital.png",
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                }),
+
+                ambulance: L.icon({
+                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/ambulance.png",
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                }),
+
+            };
+
+        // ==================================================
+        // Panes
+        // ==================================================
+
             map.createPane("shadingPane");
             map.getPane("shadingPane").style.zIndex = 350;
 
@@ -614,7 +650,7 @@
                     radius: 7,
                     color: "#ffffff",
                     weight: 2,
-                    fillColor: "#001EC7",
+                    fillColor: "#ff365e",
                     fillOpacity: 1
                 });
             },
@@ -644,7 +680,7 @@
                     radius: 7,
                     color: "#ffffff",
                     weight: 2,
-                    fillColor: "#ff365e",
+                    fillColor: "#17b3cf",
                     fillOpacity: 1
                 });
             },
@@ -675,7 +711,7 @@
                     radius: 7,
                     color: "#ffffff",
                     weight: 2,
-                    fillColor: "#00C73D",
+                    fillColor: "#34752e",
                     fillOpacity: 1
                 });
             },
@@ -757,7 +793,7 @@
         }).addTo(map);
 
         //==================================================
-        // LOAD Hospitals FROM GITHUB
+        // LOAD GEOJSON'S FROM GITHUB
         //==================================================
 
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/PublicHospitals.geojson")
@@ -772,10 +808,6 @@
                 console.error("Unable to load Hospital layer:", error);
             });
 
-        //==================================================
-        // LOAD SAAS FROM GITHUB
-        //==================================================
-
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAAS.geojson")
             .then(response => response.json())
             .then(data => {
@@ -787,10 +819,6 @@
             .catch(error => {
                 console.error("Unable to load SAAS layer:", error);
             });
-
-        //==================================================
-        // LOAD LHN FROM GITHUB
-        //==================================================
 
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/LHN.geojson")
             .then(response => response.json())
@@ -804,10 +832,6 @@
                 console.error("Unable to load LHN layer:", error);
             });
 
-        //==================================================
-        // LOAD APY FROM GITHUB
-        //==================================================
-
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/APY.geojson")
             .then(response => response.json())
             .then(data => {
@@ -819,10 +843,6 @@
             .catch(error => {
                 console.error("Unable to load APY layer:", error);
             });
-
-                    //==================================================
-        // LOAD nganampa FROM GITHUB
-        //==================================================
 
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/Nganampa_Health.geojson")
             .then(response => response.json())
@@ -840,28 +860,39 @@
         // LAYER CONTROL
         // ==================================================
 
-        const baseMaps = {
-            "Light Map": cartoLight,
-            "OpenStreetMap": openStreetMap,
-            "Satellite": esriSatellite
-        };
+// ==================================================
+// LAYER CONTROL
+// ==================================================
 
-        const overlayMaps = {
-            "Hospitals": hospital,
-            "Ambulance Sites": SAAS,
-            "Local Health Networks": lhnLayer,
-            "APY Lands":APY,
-            "Nganampa Health":nganampa
-        };
+            const baseMaps = {
+                "Light Map": cartoLight,
+                "OpenStreetMap": openStreetMap,
+                "Satellite": esriSatellite
+            };
 
-        L.control.layers(
-            baseMaps,
-            overlayMaps,
-            {
-                collapsed: false,
-                position: "topright"
-            }
-        ).addTo(map);
+            const groupedOverlays = {
+
+                "Shading": {
+                    "Local Health Networks": lhnLayer,
+                    "APY Lands": APY
+                },
+
+                "Health Sites": {
+                    "Hospitals": hospital,
+                    "Ambulance Sites": SAAS,
+                    "Nganampa Health": nganampa
+                }
+
+            };
+
+            L.control.groupedLayers(
+                baseMaps,
+                groupedOverlays,
+                {
+                    collapsed: false,
+                    position: "topright"
+                }
+            ).addTo(map);
 
         // ==================================================
         // SCALE
