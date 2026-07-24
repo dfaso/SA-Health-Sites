@@ -1,0 +1,74 @@
+name,address,suburb,postcode,type,emergency,lhn_code
+Angaston District Hospital,29 North Street,Angaston,5353,Public Hospital,Emergency Service,BHFLHN
+Balaklava Soldiers' Memorial District Hospital,16 War Memorial Drive,Balaklava,5461,Public Hospital,Emergency Service,YNLHN
+Barmera Health Service,Hawdon Street,Barmera,5345,Public Hospital,Emergency Service,RMCLHN
+Booleroo Centre District Hospital and Health Services,5-9 Stephens Street,Booleroo Centre,5482,Public Hospital,Emergency Service,YNLHN
+Bordertown Memorial Hospital,23 South Terrace,Bordertown,5268,Public Hospital,Emergency Service,LCLHN
+Burra Hospital,46 Commercial Street,Burra,5417,Public Hospital,Emergency Service,YNLHN
+Ceduna District Health Service,3 Eyre Highway,Ceduna,5690,Public Hospital,Emergency Service,EFNLHN
+Central Yorke Peninsula Hospital (Maitland),68 Robert Street,Maitland,5573,Public Hospital,Emergency Service,YNLHN
+Clare Hospital,47 Farrel Flat Road,Clare,5453,Public Hospital,Emergency Service,YNLHN
+Cleve District Hospital and Aged Care,North Terrace,Cleve,5640,Public Hospital,Emergency Service,EFNLHN
+Coober Pedy Hospital and Health Service,Lot 89 Hospital Road,Coober Pedy,5723,Public Hospital,Emergency Service,EFNLHN
+Cowell District Hospital and Aged Care,17 South Terrace,Cowell,5602,Public Hospital,Emergency Service,EFNLHN
+Crystal Brook and District Hospital,Edmund Terrace,Crystal Brook,5523,Public Hospital,Emergency Service,YNLHN
+Cummins and District Memorial Hospital,19-21 Tumby Bay Road,Cummins,5631,Public Hospital,Emergency Service,EFNLHN
+Elliston Hospital,4-6 Memorial Drive,Elliston,5670,Public Hospital,Emergency Service,EFNLHN
+Eudunda Hospital,40 Ward Street,Eudunda,5374,Public Hospital,Emergency Service,BHFLHN
+Flinders Medical Centre,Flinders Drive,Bedford Park,5042,Public Hospital,Emergency Department,SALHN
+Gawler Health Service,21 Hutchinson Road,Gawler East,5118,Public Hospital,Emergency Department,BHFLHN
+Glenside Health Services,226 Fullarton Road,Glenside,5065,Public Psychiatric Hospital,No,CALHN
+Gumeracha District Soldiers' Memorial Hospital,2 Albert Street,Gumeracha,5233,Public Hospital,Emergency Service,BHFLHN
+Hampstead Rehabilitation Centre,205-207 Hampstead Road,Lightsview,5085,Public Rehabilitation Hospital,No,NALHN
+Hawker Memorial Hospital,9 Druid Range Drive,Hawker,5434,Public Hospital,Emergency Service,FUNLHN
+James Nash House,140 Hilltop Drive,Oakden,5086,Public Psychiatric Hospital,No,NALHN
+Jamestown Hospital and Health Service,43 South Terrace,Jamestown,5491,Public Hospital,Emergency Service,YNLHN
+Kangaroo Island Health Service,3 The Esplanade,Kingscote,5223,Public Hospital,Emergency Service,BHFLHN
+Kapunda Hospital,26 Nash Street,Kapunda,5373,Public Hospital,Emergency Service,BHFLHN
+Karoonda and District Soldiers' Memorial Hospital,13 Stokes Road,Karoonda,5307,Public Hospital,Emergency Service,RMCLHN
+Kimba District Hospital and Aged Care,15 Martin Terrace,Kimba,5641,Public Hospital,Emergency Service,EFNLHN
+Kingston Soldiers' Memorial Hospital,Cnr Cooke and Young Street,Kingston SE,5275,Public Hospital,Emergency Service,LCLHN
+Lameroo District Health Service,1A Vardon Terrace,Lameroo,5302,Public Hospital,Emergency Service,RMCLHN
+Laura and District Hospital,33 Mill Street,Laura,5480,Public Hospital,Emergency Service,YNLHN
+Loxton Hospital Complex,41 Drabsch Street,Loxton,5333,Public Hospital,Emergency Service,RMCLHN
+Lyell McEwin Hospital,120-130 Haydown Road,Elizabeth Vale,5112,Public Hospital,Emergency Department,NALHN
+Mannum District Hospital,Parker Street,Mannum,5238,Public Hospital,Emergency Service,RMCLHN
+Meningie and Districts Memorial Hospital and Health Services,2 South Terrace,Meningie,5264,Public Hospital,Emergency Service,RMCLHN
+Millicent and Districts Hospital and Health Service,33 Mount Gambier Road,Millicent,5280,Public Hospital,Emergency Service,LCLHN
+Modbury Hospital,41-69 Smart Road,Modbury,5092,Public Hospital,Emergency Department,NALHN
+Mount Barker District Soldiers' Memorial Hospital,87 Wellington Road,Mount Barker,5251,Public Hospital,Emergency Department,BHFLHN
+Mount Gambier and Districts Health Service,276-300 Wehl Street North,Mount Gambier,5290,Public Hospital,Emergency Department,LCLHN
+Mount Pleasant District Hospital,28 Hospital Road,Mount Pleasant,5235,Public Hospital,Emergency Service,BHFLHN
+Murray Bridge Soldiers' Memorial Hospital,96 Swanport Road,Murray Bridge,5253,Public Hospital,Emergency Department,RMCLHN
+Naracoorte Health Service,101 Jenkins Terrace,Naracoorte,5271,Public Hospital,Emergency Service,LCLHN
+Noarlunga Hospital,Alexander Kelly Drive,Noarlunga Centre,5168,Public Hospital,Emergency Department,SALHN
+Northern Yorke Peninsula Health Service (Wallaroo),1 Ernest Terrace,Wallaroo,5556,Public Hospital,Emergency Service,YNLHN
+Orroroo and District Health Service,Pekina Road,Orroroo,5431,Public Hospital,Emergency Service,YNLHN
+Penola War Memorial Hospital,18 Church Street,Penola,5277,Public Hospital,Emergency Service,LCLHN
+Peterborough Soldiers' Memorial Hospital,23 Hurlstone Street,Peterborough,5422,Public Hospital,Emergency Service,YNLHN
+Pinnaroo Soldiers' Memorial Hospital,Bundey Terrace,Pinnaroo,5304,Public Hospital,Emergency Service,RMCLHN
+Port Augusta Hospital and Regional Health Services,71 Hospital Road,Port Augusta,5700,Public Hospital,Emergency Department,FUNLHN
+Port Broughton and District Hospital and Health Service,56-82 Bay Road,Port Broughton,5522,Public Hospital,Emergency Service,YNLHN
+Port Lincoln Health Service,39 Oxford Terrace,Port Lincoln,5606,Public Hospital,Emergency Department,EFNLHN
+Port Pirie Regional Health Service,Alexander Street,Port Pirie,5540,Public Hospital,Emergency Department,YNLHN
+Pregnancy Advisory Centre,21 Belmore Terrace,Woodville,5011,Public Hospital,No,CALHN
+Quorn Health Service,Hospital Road,Quorn,5433,Public Hospital,Emergency Service,FUNLHN
+Renmark Paringa District Hospital,Ral Ral Avenue,Renmark,5341,Public Hospital,Emergency Service,RMCLHN
+Riverland General Hospital,10 Maddern Street,Berri,5343,Public Hospital,Emergency Department,RMCLHN
+Riverton District Soldiers' Memorial Hospital,23 Moorhouse Terrace,Riverton,5412,Public Hospital,Emergency Service,YNLHN
+Roxby Downs Health Service,16-28 Burgoyne Street,Roxby Downs,5725,Public Hospital,Emergency Service,FUNLHN
+Royal Adelaide Hospital,Port Road,Adelaide,5000,Public Hospital,Emergency Department,CALHN
+Snowtown Hospital and Health Service,South Terrace,Snowtown,5520,Public Hospital,Emergency Service,YNLHN
+South Coast District Hospital,Bay Road,Victor Harbor,5211,Public Hospital,Emergency Department,BHFLHN
+Southern Yorke Peninsula Health Service (Yorketown),19 Waterloo Bay Road,Yorketown,5576,Public Hospital,Emergency Service,YNLHN
+Strathalbyn and District Health Service,14 Alfred Place,Strathalbyn,5255,Public Hospital,Emergency Service,BHFLHN
+Streaky Bay Hospital,1 Flinders Drive,Streaky Bay,5680,Public Hospital,Emergency Service,EFNLHN
+Tailem Bend District Hospital,74 Princes Highway,Tailem Bend,5260,Public Hospital,Emergency Service,RMCLHN
+Tanunda War Memorial Hospital,15 Mill Street,Tanunda,5352,Public Hospital,Emergency Service,BHFLHN
+The Queen Elizabeth Hospital,28 Woodville Road,Woodville South,5011,Public Hospital,Emergency Department,CALHN
+The Repat Precinct,216 Daws Road,Daw Park,5041,Public Rehabilitation Hospital,No,SALHN
+Tumby Bay Hospital and Health Services,8-11 Esplanade,Tumby Bay,5605,Public Hospital,Emergency Service,EFNLHN
+Waikerie Health Service,1 Lawrie Terrace,Waikerie,5330,Public Hospital,Emergency Service,RMCLHN
+Whyalla Hospital and Health Services,20 Wood Terrace,Whyalla,5600,Public Hospital,Emergency Department,FUNLHN
+Women's & Children's Hospital,72 King William Road,North Adelaide,5006,Public Hospital,Emergency Department,WCHN
+Wudinna Hospital,16-24 Richards Avenue,Wudinna,5652,Public Hospital,Emergency Service,EFNLHN

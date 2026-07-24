@@ -1,0 +1,34 @@
+name,site_type,service,address,suburb,postcode,phone,status,notes,lhn_code
+Adelaide Dental Hospital,Specialist dental hospital,SA Dental,Corner of North Terrace and George Street,Adelaide,5000,1300 008 222,Operating,Referral only,CALHN
+Angle Park (Parks),Community dental clinic,SA Dental,"Parks Community Dental Clinic, 2/40-44 Trafford Street",Angle Park,5010,(08) 8243 5629,Operating,,CALHN
+Elizabeth GP Plus,GP Plus dental clinic,SA Dental,16 Playford Boulevard,Elizabeth,5112,(08) 7485 4269,Operating,,NALHN
+Evanston,Kids dental clinic,SA Dental,20 Para Road,Evanston,5116,(08) 7485 4269,Operating,,BHFLHN
+Fulham Gardens,Kids dental clinic,SA Dental,Mitton Avenue,Henley Beach,5022,(08) 7117 4000,Operating,,CALHN
+Gawler,Community dental clinic,SA Dental,"Gawler Health Service, 21 Hutchinson Road",Gawler East,5118,(08) 7485 4269,Operating,,BHFLH
+Gilles Plains,Adult dental clinic,SA Dental,"TAFE SA, 33 Blacks Road",Gilles Plains,5086,(08) 8207 1222,Operating,,NALHN
+Hendon,Kids dental clinic,SA Dental,162 Cedar Avenue,Royal Park,5014,(08) 7117 4000,Operating,,CALHN
+Linden Park,Kids dental clinic,SA Dental,5 Highfield Avenue,St Georges,5064,(08) 7425 8850,Operating,,CALHN
+Magill,Kids dental clinic,SA Dental,Magill Primary School,Magill,5072,(08) 7425 8850,Operating,,CALHN
+Marion GP Plus,GP Plus dental clinic,SA Dental,"Level 1, 10 Milham Street",Oaklands Park,5046,(08) 7425 8400,Operating,,SALHN
+Marleston,Community dental clinic,SA Dental,229B Marion Road,Marleston,5033,(08) 7117 4000,Operating,,CALHN
+Millicent,Community dental clinic,SA Dental,17 Ninth Street,Millicent,5280,(08) 8733 3957,Operating,,LCLHN
+Mitcham,Kids dental clinic,SA Dental,"Mitcham Primary School, Elphyn Road",Kingswood,5062,(08) 7425 8400,Operating,,SALHN
+Modbury GP Plus,GP Plus dental clinic,SA Dental,77 Smart Road,Modbury,5092,(08) 7425 8700,Operating,,NALHN
+Mount Barker - Kids,Kids dental clinic,SA Dental,"Mount Barker Primary School, 2A Dumas Street",Mount Barker,5251,(08) 7117 4490,Operating,,BHFLHN
+Mount Barker - Adults,Adult dental clinic,SA Dental,"Mount Barker District Soldiers' Memorial Hospital, 87 Wellington Road",Mount Barker,5251,(08) 7117 4490,Operating,,BHFLHN
+Mount Gambier,Community dental clinic,SA Dental,"Mount Gambier and Districts Health Service, 276-300 Wehl Street North",Mount Gambier,5290,(08) 8721 1633,Operating,,LCLHN
+Murray Bridge,Community dental clinic,SA Dental,45 Beatty Terrace,Murray Bridge,5253,(08) 7117 4490,Operating,,RMCLHN
+Naracoorte,Community dental clinic,SA Dental,"Naracoorte Primary School, 41 Park Terrace",Naracoorte,5271,(08) 8762 2614,Operating,,LCLHN
+Noarlunga GP Plus,GP Plus dental clinic,SA Dental,2 Alexander Kelly Drive,Noarlunga Centre,5168,(08) 8384 9244,Operating,,SALHN
+Pennington,Kids dental clinic,SA Dental,"Pennington Primary School, Butler Avenue",Pennington,5013,(08) 8243 5629,Operating,,CALHN
+Port Adelaide,Adult dental clinic,SA Dental,"Wonggangga Turtpandi Aboriginal Primary Health Care Services, 11 Church Street",Port Adelaide,5015,(08) 8243 5629,Operating,,CALHN
+Port Augusta,Community dental clinic,SA Dental,"Flinders and Far North Community Health Service, 36 Flinders Terrace",Port Augusta,5700,(08) 8668 7840,Operating,,FUNLHN
+Port Lincoln,Community dental clinic,SA Dental,39 Oxford Terrace,Port Lincoln,5606,(08) 7669 1700,Operating,,EFNLHN
+Port Pirie,Adult dental clinic,SA Dental,"Port Pirie Regional Health Service, The Terrace",Port Pirie,5540,(08) 8638 4426,Operating,,YNLHN
+Port Pirie West,Kids dental clinic,SA Dental,"Port Pirie West Primary School, 214 The Terrace",Port Pirie West,5540,(08) 8632 1926,Operating,,YNLHN
+Prospect,Kids dental clinic,SA Dental,"Prospect Primary School, Burrage Place",Prospect,5082,(08) 7117 4000,Operating,,CALHN
+Riverland (Berri),Community dental clinic,SA Dental,10 Maddern Avenue,Berri,5343,(08) 8580 2700,Operating,,RMCLHN
+Salisbury,Community dental clinic,SA Dental,21 Hollywood Boulevard,Salisbury Downs,5108,(08) 7485 4700,Operating,,NALHN
+Victor Harbor,Community dental clinic,SA Dental,"South Coast District Hospital, Bay Road",Victor Harbor,5211,(08) 8551 0460,Operating,,BHFLHN
+Wallaroo,Community dental clinic,SA Dental,"Wallaroo Hospital and Health Services, 1 Ernest Terrace",Wallaroo,5556,(08) 7117 4492,Operating,,YNLHN
+Whyalla,Oral health centre,SA Dental,"Whyalla Oral Health Centre, 111 Nicolson Avenue",Whyalla Norrie,5608,(08) 7117 4493,Operating,,FUNLHN
