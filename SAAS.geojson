@@ -5475,7 +5475,7 @@
         "featuretype": "EMERGENCY FACILITY",
         "descripton": "An emergency management facility from which a particular agency’s resources are commanded, coordinated and assigned to an incident or emergency",
         "class": "AMBULANCE STATION",
-        "lhn_code": "RMCLHN",
+        "lhn_code": "YNLHN",
         "facility_name": "RIVERTON STATION",
         "facility_operationalstatus": "OPERATIONAL",
         "facility_address": "16 TORRENS ROAD",
