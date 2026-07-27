@@ -10,8 +10,8 @@
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.css"
->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.css">
 
     <style>
         /* ==================================================
@@ -80,188 +80,13 @@
 
 
         /* ==================================================
-           SIDEBAR
-        ================================================== */
-
-        .sidebar {
-            width: 300px;
-            min-width: 300px;
-
-            box-sizing: border-box;
-
-            background-color: white;
-            border-right: 1px solid #cccccc;
-
-            transition:
-                width 0.3s ease,
-                min-width 0.3s ease;
-
-            position: relative;
-            z-index: 1500;
-        }
-
-        .sidebar.collapsed {
-            width: 0;
-            min-width: 0;
-
-            border-right: none;
-        }
-
-        .sidebar-content {
-            padding: 20px;
-
-            box-sizing: border-box;
-
-            overflow: hidden;
-
-            transition:
-                opacity 0.2s ease,
-                visibility 0.2s ease;
-        }
-
-        .sidebar.collapsed .sidebar-content {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        .sidebar h2 {
-            margin: 0 0 18px;
-
-            font-size: 20px;
-        }
-
-        .sidebar-section {
-            margin-bottom: 18px;
-            padding: 14px;
-
-            background-color: #f4f6f8;
-
-            border: 1px solid #d6dce1;
-            border-radius: 6px;
-        }
-
-        .sidebar-section h3 {
-            margin: 0 0 10px;
-
-            font-size: 15px;
-            color: #005eb8;
-        }
-
-        .sidebar-section p {
-            margin: 0;
-
-            font-size: 13px;
-            line-height: 1.5;
-
-            color: #444444;
-        }
-
-        .sidebar-section label {
-            display: block;
-
-            margin-bottom: 6px;
-
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .sidebar-section input,
-        .sidebar-section select {
-            width: 100%;
-
-            box-sizing: border-box;
-
-            padding: 9px;
-
-            border: 1px solid #b8bec4;
-            border-radius: 4px;
-
-            background-color: white;
-
-            font-size: 14px;
-        }
-
-        .sidebar-section button {
-            width: 100%;
-
-            padding: 10px;
-
-            border: none;
-            border-radius: 4px;
-
-            background-color: #005eb8;
-            color: white;
-
-            font-size: 14px;
-
-            cursor: pointer;
-        }
-
-        .sidebar-section button:hover {
-            background-color: #004a92;
-        }
-
-
-        /* ==================================================
-           SIDEBAR TOGGLE
-        ================================================== */
-
-        .sidebar-toggle {
-            position: absolute;
-
-            top: 20px;
-            left: 300px;
-
-            width: 38px;
-            height: 42px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 0;
-
-            border: 1px solid #aaaaaa;
-            border-left: none;
-            border-radius: 0 6px 6px 0;
-
-            background-color: white;
-            color: #005eb8;
-
-            font-size: 21px;
-            font-weight: bold;
-
-            cursor: pointer;
-
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.18);
-
-            transition:
-                left 0.3s ease,
-                background-color 0.2s ease;
-
-            z-index: 1600;
-        }
-
-        .sidebar-toggle:hover {
-            background-color: #eeeeee;
-        }
-
-        .sidebar.collapsed+.sidebar-toggle {
-            left: 0;
-        }
-
-
-        /* ==================================================
            MAP AREA
 
            This area fills the space beside the sidebar.
         ================================================== */
 
         .map-area {
-            flex: 1;
-
-            min-width: 0;
+            width: 100%;
 
             display: flex;
             justify-content: center;
@@ -271,9 +96,20 @@
 
             padding: 25px;
         }
-        .leaflet-interactive:focus {
-            outline: none !important;
-}
+
+        /* ==================================================
+            CONTENT AREA
+        ================================================== */
+
+        .content-area {
+            flex: 1;
+            min-width: 0;
+
+            display: flex;
+            flex-direction: column;
+
+            box-sizing: border-box;
+        }
 
         /* ==================================================
            MAP FRAME
@@ -313,6 +149,149 @@
             display: block;
         }
 
+        .leaflet-interactive:focus,
+        .leaflet-interactive:focus-visible {
+            outline: none !important;
+        }
+
+        /* ==================================================
+        SITE TABLE
+        ================================================== */
+
+        #siteTableSection {
+            box-sizing: border-box;
+
+            margin: 0 25px 25px;
+            padding: 20px;
+
+            background-color: white;
+
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .site-table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            margin-bottom: 16px;
+        }
+
+        .site-table-header h2 {
+            margin: 0 0 4px;
+
+            font-size: 20px;
+        }
+
+        .site-table-header p {
+            margin: 0;
+
+            font-size: 13px;
+            color: #555555;
+        }
+
+        #clearTableFilter {
+            padding: 9px 14px;
+
+            border: none;
+            border-radius: 4px;
+
+            background-color: #005eb8;
+            color: white;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        #clearTableFilter:hover {
+            background-color: #004a92;
+        }
+
+        .site-table-wrapper {
+            width: 100%;
+
+            overflow-x: auto;
+        }
+
+        #siteTable {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            font-size: 13px;
+        }
+
+        #siteTable th,
+        #siteTable td {
+            padding: 10px;
+
+            border: 1px solid #dddddd;
+
+            text-align: left;
+            vertical-align: top;
+        }
+
+        #siteTable th {
+            background-color: #005eb8;
+            color: white;
+
+            white-space: nowrap;
+        }
+
+        #siteTable tbody tr:nth-child(even) {
+            background-color: #f6f8fa;
+        }
+
+        #siteTable tbody tr:hover {
+            background-color: #eaf3fb;
+        }
+
+        .site-table-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #exportCsvButton {
+            padding: 9px 14px;
+
+            border: none;
+            border-radius: 4px;
+
+            background-color: #005eb8;
+            color: white;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        #exportCsvButton:hover {
+            background-color: #004a92;
+        }
+
+        #resetMapButton {
+            padding: 9px 14px;
+
+            border: none;
+            border-radius: 4px;
+
+            background-color: #005eb8;
+            color: white;
+
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        #resetMapButton:hover {
+            background-color: #004a92;
+        }
 
         /* ==================================================
            SMALL SCREENS
@@ -335,33 +314,7 @@
             }
 
             .app-container {
-                min-height: calc(100vh - 60px);
-            }
-
-            .sidebar {
-                position: absolute;
-
-                top: 0;
-                bottom: 0;
-                left: 0;
-
-                width: 280px;
-                min-width: 280px;
-
-                box-shadow: 3px 0 8px rgba(0, 0, 0, 0.25);
-            }
-
-            .sidebar.collapsed {
-                width: 0;
-                min-width: 0;
-            }
-
-            .sidebar-toggle {
-                left: 280px;
-            }
-
-            .sidebar.collapsed+.sidebar-toggle {
-                left: 0;
+                min-height: calc(100vh - 70px);
             }
 
             .map-area {
@@ -383,15 +336,12 @@
     =================================================== -->
 
     <header class="main-header">
-
         <div>
             <h1>SA Health Sites Map</h1>
-
             <p>
                 Health sites and service locations
             </p>
         </div>
-
     </header>
 
 
@@ -401,114 +351,58 @@
 
     <main class="app-container">
 
-        <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar" aria-label="Map controls">
-
-            <div class="sidebar-content">
-
-                <h2>Map Controls</h2>
-
-
-                <div class="sidebar-section">
-
-                    <h3>Search</h3>
-
-                    <label for="siteSearch">
-                        Search for a site
-                    </label>
-
-                    <input type="text" id="siteSearch" placeholder="Enter a site name">
-
+        <!-- Content area -->
+        <section class="content-area">
+            <div class="map-area">
+                <div class="map-frame">
+                    <div id="map"></div>
                 </div>
-
-
-                <div class="sidebar-section">
-
-                    <h3>Local Health Network</h3>
-
-                    <label for="lhnSelect">
-                        Select an LHN
-                    </label>
-
-                    <select id="lhnSelect">
-
-                        <option value="">
-                            All Local Health Networks
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="sidebar-section">
-
-                    <h3>Site Type</h3>
-
-                    <label for="siteTypeSelect">
-                        Select a site type
-                    </label>
-
-                    <select id="siteTypeSelect">
-
-                        <option value="">
-                            All site types
-                        </option>
-
-                        <option value="hospital">
-                            Hospitals
-                        </option>
-
-                        <option value="ambulance">
-                            Ambulance sites
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="sidebar-section">
-
-                    <h3>Information</h3>
-
-                    <p>
-                        Future filters, selected-site information and map
-                        tools can be displayed in this sidebar.
-                    </p>
-
-                </div>
-
-
-                <div class="sidebar-section">
-
-                    <button id="resetMapButton" type="button">
-                        Reset Map
-                    </button>
-
-                </div>
-
             </div>
 
-        </aside>
+            <section id="siteTableSection">
+                <div class="site-table-header">
+                    <div>
+                        <h2>Health Sites</h2>
+                        <p id="siteTableSummary">
+                            Loading site data...
+                        </p>
+                    </div>
+                    <div class="site-table-actions">
 
+                        <button id="resetMapButton" type="button">
+                            Reset Map
+                        </button>
+                        <button id="clearTableFilter" type="button">
+                            Show All Sites
+                        </button>
+                        <button id="exportCsvButton" type="button">
+                            Export to CSV
+                        </button>
 
-        <!-- Sidebar toggle -->
-        <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Collapse sidebar"
-            aria-expanded="true">
-            &#10094;
-        </button>
+                    </div>
+                </div>
 
-
-        <!-- Map area -->
-        <section class="map-area">
-
-            <div class="map-frame">
-
-                <div id="map"></div>
-
-            </div>
-
+                <div class="site-table-wrapper">
+                    <table id="siteTable">
+                        <thead>
+                            <tr>
+                                <th>Site Name</th>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Service</th>
+                                <th>Address</th>
+                                <th>Suburb</th>
+                                <th>Postcode</th>
+                                <th>LHN</th>
+                                <th>Status</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody id="siteTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </section>
 
     </main>
@@ -517,6 +411,7 @@
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 
     <script>
@@ -528,6 +423,16 @@
         const defaultMapCentre = [-30.5, 135.5];
         const defaultMapZoom = 6;
 
+        // ==================================================
+        // TABLE STATE
+        // ==================================================
+
+        let siteData = [];
+
+        let selectedFilter = {
+            type: null,
+            value: null
+        };
 
         // ==================================================
         // CREATE MAP
@@ -597,40 +502,40 @@
         // ICONS
         // ==================================================
 
-            const icons = {
+        const icons = {
 
-                dental: L.icon({
-                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/dental.png",
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32]
-                }),
+            dental: L.icon({
+                iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/dental.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            }),
 
-                hospital: L.icon({
-                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/hospital.png",
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32]
-                }),
+            hospital: L.icon({
+                iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/hospital.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            }),
 
-                ambulance: L.icon({
-                    iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/ambulance.png",
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32]
-                }),
+            ambulance: L.icon({
+                iconUrl: "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/images/ambulance.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            }),
 
-            };
+        };
 
         // ==================================================
         // Panes
         // ==================================================
 
-            map.createPane("shadingPane");
-            map.getPane("shadingPane").style.zIndex = 350;
+        map.createPane("shadingPane");
+        map.getPane("shadingPane").style.zIndex = 350;
 
-            map.createPane("sitePane");
-            map.getPane("sitePane").style.zIndex = 500;
+        map.createPane("sitePane");
+        map.getPane("sitePane").style.zIndex = 500;
 
 
         // ==================================================
@@ -673,6 +578,7 @@
             }
         }).addTo(map);
 
+        /*
         const nganampa = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, {
@@ -688,7 +594,7 @@
             onEachFeature: function (feature, layer) {
                 const p = feature.properties || {};
                 layer.bindTooltip(
-                `Name: <strong>${p.name}</strong><br>
+                    `Name: <strong>${p.name}</strong><br>
                 Community: ${p.community}<br>
                 Organisation: ${p.organisation}`,
                     {
@@ -703,8 +609,9 @@
                 });
             }
         }).addTo(map);
+        */
 
-                const SAAS = L.geoJSON(null, {
+        const SAAS = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, {
                     pane: "sitePane",
@@ -735,7 +642,7 @@
             }
         }).addTo(map);
 
-                const dental = L.geoJSON(null, {
+        const dental = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, {
                     pane: "sitePane",
@@ -784,6 +691,13 @@
                     }
                 );
                 layer.on("click", function () {
+                    selectedFilter = {
+                        type: "lhn",
+                        value: p.lhn_code
+                    };
+
+                    renderTable();
+
                     map.fitBounds(
                         layer.getBounds(),
                         {
@@ -795,7 +709,8 @@
             }
         }).addTo(map);
 
-        const APY = L.geoJSON(null, {
+            /*         
+            const APY = L.geoJSON(null, {
             pane: "shadingPane",
             style: {
                 color: "#C70046",
@@ -821,7 +736,7 @@
                     );
                 });
             }
-        }).addTo(map);
+        }).addTo(map); */
 
         //==================================================
         // LOAD GEOJSON'S FROM GITHUB
@@ -899,40 +814,233 @@
                 console.error("Unable to load SA Dental layer:", error);
             });
 
-// ==================================================
-// LAYER CONTROL
-// ==================================================
+        // ==================================================
+        // LOAD SITE TABLE CSV
+        // ==================================================
 
-            const baseMaps = {
-                "Light Map": cartoLight,
-                "OpenStreetMap": openStreetMap,
-                "Satellite": esriSatellite
-            };
-
-            const groupedOverlays = {
-
-                "Shading": {
-                    "Local Health Networks": lhnLayer,
-                    "APY Lands": APY
-                },
-
-                "Health Sites": {
-                    "Hospitals": hospital,
-                    "Ambulance Sites": SAAS,
-                    "SA Dental": dental,
-                    "Nganampa Health": nganampa
+        fetch(
+            "https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/tableCSV/sites.csv"
+        )
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(
+                        `CSV request failed: ${response.status}`
+                    );
                 }
 
-            };
+                return response.text();
+            })
+            .then(csvText => {
+                siteData = parseCSV(csvText);
 
-            L.control.groupedLayers(
-                baseMaps,
-                groupedOverlays,
-                {
-                    collapsed: false,
-                    position: "topright"
+                console.log(
+                    "Site table records loaded:",
+                    siteData.length
+                );
+
+                renderTable();
+            })
+            .catch(error => {
+                console.error(
+                    "Unable to load site table CSV:",
+                    error
+                );
+
+                document.getElementById(
+                    "siteTableSummary"
+                ).textContent =
+                    "Unable to load site data.";
+            });
+
+        function parseCSV(csvText) {
+            const result = Papa.parse(csvText, {
+                header: true,
+                skipEmptyLines: true,
+                transformHeader: function (header) {
+                    return header.trim();
                 }
-            ).addTo(map);
+            });
+
+            if (result.errors.length > 0) {
+                console.warn(
+                    "CSV parsing warnings:",
+                    result.errors
+                );
+            }
+
+            return result.data;
+        }
+
+
+        function renderTable() {
+            const tableBody =
+                document.getElementById("siteTableBody");
+
+            const tableSummary =
+                document.getElementById("siteTableSummary");
+
+            tableBody.innerHTML = "";
+
+            let filteredSites = siteData;
+
+            if (
+                selectedFilter.type === "lhn" &&
+                selectedFilter.value
+            ) {
+                filteredSites = siteData.filter(site =>
+                    site.lhn_code === selectedFilter.value
+                );
+            }
+
+            if (
+                selectedFilter.type === "site" &&
+                selectedFilter.value
+            ) {
+                filteredSites = siteData.filter(site =>
+                    site.site_name === selectedFilter.value
+                );
+            }
+
+            filteredSites.forEach(site => {
+                const row =
+                    document.createElement("tr");
+
+                row.innerHTML = `
+            <td>${site.site_name || ""}</td>
+            <td>${site.site_category || ""}</td>
+            <td>${site.site_type || ""}</td>
+            <td>${site.service || ""}</td>
+            <td>${site.address || ""}</td>
+            <td>${site.suburb || ""}</td>
+            <td>${site.postcode || ""}</td>
+            <td>${site.lhn_code || ""}</td>
+            <td>${site.status || ""}</td>
+            <td>${site.details || ""}</td>
+        `;
+
+                tableBody.appendChild(row);
+            });
+
+            if (selectedFilter.type === "lhn") {
+                tableSummary.textContent =
+                    `${filteredSites.length} sites displayed for ${selectedFilter.value}`;
+            } else if (selectedFilter.type === "site") {
+                tableSummary.textContent =
+                    `${filteredSites.length} matching site displayed`;
+            } else {
+                tableSummary.textContent =
+                    `${filteredSites.length} sites displayed`;
+            }
+        }
+
+
+        // ==================================================
+        //  BUTTONS
+        // ==================================================
+
+        document
+            .getElementById("resetMapButton")
+            .addEventListener("click", function () {
+                resetMapView();
+            });
+
+        document
+            .getElementById("clearTableFilter")
+            .addEventListener("click", function () {
+
+                selectedFilter = {
+                    type: null,
+                    value: null
+                };
+
+                renderTable();
+
+            });
+
+        document
+            .getElementById("exportCsvButton")
+            .addEventListener("click", function () {
+
+                let filteredSites = siteData;
+
+                if (
+                    selectedFilter.type === "lhn" &&
+                    selectedFilter.value
+                ) {
+                    filteredSites = siteData.filter(site =>
+                        site.lhn_code === selectedFilter.value
+                    );
+                }
+
+                if (
+                    selectedFilter.type === "site" &&
+                    selectedFilter.value
+                ) {
+                    filteredSites = siteData.filter(site =>
+                        site.site_name === selectedFilter.value
+                    );
+                }
+
+                const csvText = Papa.unparse(filteredSites);
+
+                const blob = new Blob(
+                    [csvText],
+                    { type: "text/csv;charset=utf-8;" }
+                );
+
+                const link = document.createElement("a");
+
+                link.href = URL.createObjectURL(blob);
+
+                link.download =
+                    selectedFilter.type === "lhn"
+                        ? `health-sites-${selectedFilter.value}.csv`
+                        : "health-sites.csv";
+
+                document.body.appendChild(link);
+
+                link.click();
+
+                document.body.removeChild(link);
+
+                URL.revokeObjectURL(link.href);
+
+            });
+
+        // ==================================================
+        // LAYER CONTROL
+        // ==================================================
+
+        const baseMaps = {
+            "Light Map": cartoLight,
+            "OpenStreetMap": openStreetMap,
+            "Satellite": esriSatellite
+        };
+
+        const groupedOverlays = {
+
+            "Shading": {
+                "Local Health Networks": lhnLayer,
+                /* "APY Lands": APY */
+            },
+
+            "Health Sites": {
+                "Hospitals": hospital,
+                "Ambulance Sites": SAAS,
+                "SA Dental": dental,
+                /* "Nganampa Health": nganampa */
+            }
+
+        };
+
+        L.control.groupedLayers(
+            baseMaps,
+            groupedOverlays,
+            {
+                collapsed: false,
+                position: "topright"
+            }
+        ).addTo(map);
 
         // ==================================================
         // SCALE
@@ -955,63 +1063,7 @@
             );
         }
 
-        // ==================================================
-        // SIDEBAR
-        // ==================================================
 
-        const sidebar =
-            document.getElementById("sidebar");
-
-        const sidebarToggle =
-            document.getElementById("sidebarToggle");
-
-        sidebarToggle.addEventListener("click", function () {
-            const isCollapsed =
-                sidebar.classList.toggle("collapsed");
-
-            if (isCollapsed) {
-                sidebarToggle.innerHTML = "&#10095;";
-                sidebarToggle.setAttribute(
-                    "aria-label",
-                    "Expand sidebar"
-                );
-                sidebarToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-            } else {
-                sidebarToggle.innerHTML = "&#10094;";
-                sidebarToggle.setAttribute(
-                    "aria-label",
-                    "Collapse sidebar"
-                );
-                sidebarToggle.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-            }
-
-            /*
-             * Wait until the CSS sidebar transition finishes,
-             * then tell Leaflet to recalculate the map size.
-             */
-
-            setTimeout(function () {
-                map.invalidateSize(true);
-            }, 320);
-
-        });
-
-
-        // ==================================================
-        // RESET BUTTON
-        // ==================================================
-
-        document
-            .getElementById("resetMapButton")
-            .addEventListener("click", function () {
-                resetMapView();
-            });
 
 
         // ==================================================
