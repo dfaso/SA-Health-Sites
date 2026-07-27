@@ -363,6 +363,8 @@
                 <div class="site-table-header">
                     <div>
                         <h2>Health Sites</h2>
+                        <p>**** Please note that SA Ambulance sites are not governed by LHN's, the SA Ambulance sites
+                            are using an LHN flag to manage grouping only.</p><br>
                         <p id="siteTableSummary">
                             Loading site data...
                         </p>
@@ -394,8 +396,6 @@
                                 <th>Suburb</th>
                                 <th>Postcode</th>
                                 <th>LHN</th>
-                                <th>Status</th>
-                                <th>Details</th>
                             </tr>
                         </thead>
                         <tbody id="siteTableBody">
@@ -429,6 +429,10 @@
 
         let siteData = [];
 
+        let hospitalData = null;
+        let saasData = null;
+        let dentalData = null;
+
         let selectedFilter = {
             type: null,
             value: null
@@ -436,9 +440,6 @@
 
         // ==================================================
         // CREATE MAP
-        //
-        // No maximum bounds are applied.
-        // The standard Leaflet zoom control is disabled.
         // ==================================================
 
         const map = L.map("map", {
@@ -578,39 +579,6 @@
             }
         }).addTo(map);
 
-        /*
-        const nganampa = L.geoJSON(null, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, {
-                    pane: "sitePane",
-                    radius: 7,
-                    color: "#ffffff",
-                    weight: 2,
-                    fillColor: "#17b3cf",
-                    fillOpacity: 1
-                });
-            },
-
-            onEachFeature: function (feature, layer) {
-                const p = feature.properties || {};
-                layer.bindTooltip(
-                    `Name: <strong>${p.name}</strong><br>
-                Community: ${p.community}<br>
-                Organisation: ${p.organisation}`,
-                    {
-                        sticky: true
-                    }
-                );
-                layer.on("click", function () {
-                    map.setView(
-                        layer.getLatLng(),
-                        15
-                    );
-                });
-            }
-        }).addTo(map);
-        */
-
         const SAAS = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, {
@@ -673,13 +641,60 @@
             }
         }).addTo(map);
 
+        function filterPointLayersByLhn(lhnCode) {
+
+            const selectedCode = String(lhnCode || "")
+                .trim()
+                .toUpperCase();
+
+            function matchesLhn(feature) {
+                const properties = feature.properties || {};
+
+                const featureCode = String(
+                    properties.LHN_CODE ||
+                    properties.lhn_code ||
+                    ""
+                )
+                    .trim()
+                    .toUpperCase();
+
+                return !selectedCode || featureCode === selectedCode;
+            }
+
+            hospital.clearLayers();
+            SAAS.clearLayers();
+            dental.clearLayers();
+
+            if (hospitalData?.features) {
+                hospital.addData({
+                    type: "FeatureCollection",
+                    features: hospitalData.features.filter(matchesLhn)
+                });
+            }
+
+            if (saasData?.features) {
+                SAAS.addData({
+                    type: "FeatureCollection",
+                    features: saasData.features.filter(matchesLhn)
+                });
+            }
+
+            if (dentalData?.features) {
+                dental.addData({
+                    type: "FeatureCollection",
+                    features: dentalData.features.filter(matchesLhn)
+                });
+            }
+        }
+
         const lhnLayer = L.geoJSON(null, {
             pane: "shadingPane",
             style: {
                 color: "#005EB8",
                 weight: 1,
+                opacity: 1,
                 fillColor: "#005EB8",
-                fillOpacity: 0.10
+                fillOpacity: 0.25
             },
             onEachFeature: function (feature, layer) {
                 const p = feature.properties || {};
@@ -691,10 +706,25 @@
                     }
                 );
                 layer.on("click", function () {
+                    lhnLayer.eachLayer(function (lhn) {
+
+                        lhn.setStyle({
+                            weight: 1,
+                            fillOpacity: 0.02
+                        });
+
+                    });
+
+                    layer.setStyle({
+                        weight: 3,
+                        fillOpacity: 0.25
+                    });
                     selectedFilter = {
                         type: "lhn",
                         value: p.lhn_code
                     };
+
+                    filterPointLayersByLhn(p.lhn_code);
 
                     renderTable();
 
@@ -709,35 +739,6 @@
             }
         }).addTo(map);
 
-            /*         
-            const APY = L.geoJSON(null, {
-            pane: "shadingPane",
-            style: {
-                color: "#C70046",
-                weight: 1,
-                fillColor: "#C70046",
-                fillOpacity: 0.10
-            },
-            onEachFeature: function (feature, layer) {
-                const p = feature.properties || {};
-                layer.bindTooltip(
-                    `<strong>${p.abb_name}</strong>`,
-                    {
-                        sticky: true
-                    }
-                );
-                layer.on("click", function () {
-                    map.fitBounds(
-                        layer.getBounds(),
-                        {
-                            padding: [30, 30],
-                            maxZoom: 10
-                        }
-                    );
-                });
-            }
-        }).addTo(map); */
-
         //==================================================
         // LOAD GEOJSON'S FROM GITHUB
         //==================================================
@@ -745,10 +746,8 @@
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/PublicHospitals.geojson")
             .then(response => response.json())
             .then(data => {
-                hospital.addData(data);
-                map.fitBounds(hospital.getBounds(), {
-                    padding: [20, 20]
-                });
+                hospitalData = data;
+                hospital.addData(hospitalData);
             })
             .catch(error => {
                 console.error("Unable to load Hospital layer:", error);
@@ -757,10 +756,8 @@
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAAS.geojson")
             .then(response => response.json())
             .then(data => {
-                SAAS.addData(data);
-                map.fitBounds(SAAS.getBounds(), {
-                    padding: [20, 20]
-                });
+                saasData = data;
+                SAAS.addData(saasData);
             })
             .catch(error => {
                 console.error("Unable to load SAAS layer:", error);
@@ -778,37 +775,11 @@
                 console.error("Unable to load LHN layer:", error);
             });
 
-        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/APY.geojson")
-            .then(response => response.json())
-            .then(data => {
-                APY.addData(data);
-                map.fitBounds(APY.getBounds(), {
-                    padding: [20, 20]
-                });
-            })
-            .catch(error => {
-                console.error("Unable to load APY layer:", error);
-            });
-
-        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/Nganampa_Health.geojson")
-            .then(response => response.json())
-            .then(data => {
-                nganampa.addData(data);
-                map.fitBounds(nganampa.getBounds(), {
-                    padding: [20, 20]
-                });
-            })
-            .catch(error => {
-                console.error("Unable to load Nganampa Health layer:", error);
-            });
-
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SADS.geojson")
             .then(response => response.json())
             .then(data => {
-                dental.addData(data);
-                map.fitBounds(dental.getBounds(), {
-                    padding: [20, 20]
-                });
+                dentalData = data;
+                dental.addData(dentalData);
             })
             .catch(error => {
                 console.error("Unable to load SA Dental layer:", error);
@@ -914,8 +885,6 @@
             <td>${site.suburb || ""}</td>
             <td>${site.postcode || ""}</td>
             <td>${site.lhn_code || ""}</td>
-            <td>${site.status || ""}</td>
-            <td>${site.details || ""}</td>
         `;
 
                 tableBody.appendChild(row);
@@ -1020,15 +989,13 @@
         const groupedOverlays = {
 
             "Shading": {
-                "Local Health Networks": lhnLayer,
-                /* "APY Lands": APY */
+                "Local Health Networks": lhnLayer
             },
 
             "Health Sites": {
                 "Hospitals": hospital,
                 "Ambulance Sites": SAAS,
-                "SA Dental": dental,
-                /* "Nganampa Health": nganampa */
+                "SA Dental": dental
             }
 
         };
@@ -1057,14 +1024,30 @@
         // ==================================================
 
         function resetMapView() {
+
+            selectedFilter = {
+                type: null,
+                value: null
+            };
+
+            lhnLayer.eachLayer(function (lhn) {
+
+                lhn.setStyle({
+                    weight: 1,
+                    fillOpacity: 0.25
+                });
+
+            });
+
+            filterPointLayersByLhn(null);
+
+            renderTable();
+
             map.setView(
                 defaultMapCentre,
                 defaultMapZoom
             );
         }
-
-
-
 
         // ==================================================
         // INITIAL MAP SIZE CORRECTION
