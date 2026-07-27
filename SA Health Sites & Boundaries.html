@@ -196,24 +196,6 @@
             color: #555555;
         }
 
-        #clearTableFilter {
-            padding: 9px 14px;
-
-            border: none;
-            border-radius: 4px;
-
-            background-color: #005eb8;
-            color: white;
-
-            font-size: 14px;
-
-            cursor: pointer;
-        }
-
-        #clearTableFilter:hover {
-            background-color: #004a92;
-        }
-
         .site-table-wrapper {
             width: 100%;
 
@@ -376,9 +358,6 @@
                         <button id="resetMapButton" type="button">
                             Reset Map
                         </button>
-                        <button id="clearTableFilter" type="button">
-                            Show All Sites
-                        </button>
                         <button id="exportCsvButton" type="button">
                             Export to CSV
                         </button>
@@ -414,7 +393,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/overlapping-marker-spiderfier-leaflet@0.2.7/oms.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/overlapping-marker-spiderfier-leaflet@0.2.7/oms.min.js"></script>
 
     <script>
 
@@ -458,7 +437,7 @@
         });
 
 
-        
+
         // ==================================================
         // BASE MAPS
         // ==================================================
@@ -951,19 +930,6 @@
             .getElementById("resetMapButton")
             .addEventListener("click", function () {
                 resetMapView();
-            });
-
-        document
-            .getElementById("clearTableFilter")
-            .addEventListener("click", function () {
-
-                selectedFilter = {
-                    type: null,
-                    value: null
-                };
-
-                renderTable();
-
             });
 
         document
