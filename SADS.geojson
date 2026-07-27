@@ -13,6 +13,7 @@
         "name": "Adelaide Dental Hospital",
         "site_type": "Specialist dental hospital",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Corner of North Terrace and George Street",
         "suburb": "Adelaide",
         "postcode": "5000",
@@ -20,9 +21,12 @@
         "status": "Operating",
         "notes": "Referral only"
       },
-      "geometry":{ 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.591268, -34.921506]
+        "coordinates": [
+          138.591268,
+          -34.921506
+        ]
       }
     },
     {
@@ -31,6 +35,7 @@
         "name": "Angle Park (Parks)",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Parks Community Dental Clinic, 2/40-44 Trafford Street",
         "suburb": "Angle Park",
         "postcode": "5010",
@@ -38,9 +43,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.557060, -34.858918]
+        "coordinates": [
+          138.557060,
+          -34.858918
+        ]
       }
     },
     {
@@ -49,6 +57,7 @@
         "name": "Elizabeth GP Plus",
         "site_type": "GP Plus dental clinic",
         "service": "SA Dental",
+        "lhn_code": "NALHN",
         "address": "16 Playford Boulevard",
         "suburb": "Elizabeth",
         "postcode": "5112",
@@ -56,9 +65,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.6710785, -34.716801]
+        "coordinates": [
+          138.6710785,
+          -34.716801
+        ]
       }
     },
     {
@@ -67,6 +79,7 @@
         "name": "Evanston",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "BHFLHN",
         "address": "20 Para Road",
         "suburb": "Evanston",
         "postcode": "5116",
@@ -74,9 +87,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.734003, -34.616081]
+        "coordinates": [
+          138.734003,
+          -34.616081
+        ]
       }
     },
     {
@@ -85,6 +101,7 @@
         "name": "Fulham Gardens",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Mitton Avenue",
         "suburb": "Henley Beach",
         "postcode": "5022",
@@ -92,9 +109,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.504169, -34.912610]
+        "coordinates": [
+          138.504169,
+          -34.912610
+        ]
       }
     },
     {
@@ -103,6 +123,7 @@
         "name": "Gawler",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "BHFLHN",
         "address": "Gawler Health Service, 21 Hutchinson Road",
         "suburb": "Gawler East",
         "postcode": "5118",
@@ -110,9 +131,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.755161, -34.593246]
+        "coordinates": [
+          138.755161,
+          -34.593246
+        ]
       }
     },
     {
@@ -121,6 +145,7 @@
         "name": "Gilles Plains",
         "site_type": "Adult dental clinic",
         "service": "SA Dental",
+        "lhn_code": "NALHN",
         "address": "TAFE SA, 33 Blacks Road",
         "suburb": "Gilles Plains",
         "postcode": "5086",
@@ -128,9 +153,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.653039, -34.851852]
+        "coordinates": [
+          138.653039,
+          -34.851852
+        ]
       }
     },
     {
@@ -139,6 +167,7 @@
         "name": "Hendon",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "162 Cedar Avenue",
         "suburb": "Royal Park",
         "postcode": "5014",
@@ -146,9 +175,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.510869, -34.878818]
+        "coordinates": [
+          138.510869,
+          -34.878818
+        ]
       }
     },
     {
@@ -157,6 +189,7 @@
         "name": "Linden Park",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "5 Highfield Avenue",
         "suburb": "St Georges",
         "postcode": "5064",
@@ -164,9 +197,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.644555, -34.948206]
+        "coordinates": [
+          138.644555,
+          -34.948206
+        ]
       }
     },
     {
@@ -175,6 +211,7 @@
         "name": "Magill",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Magill Primary School",
         "suburb": "Magill",
         "postcode": "5072",
@@ -182,9 +219,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.679206, -34.913917]
+        "coordinates": [
+          138.679206,
+          -34.913917
+        ]
       }
     },
     {
@@ -193,6 +233,7 @@
         "name": "Marion GP Plus",
         "site_type": "GP Plus dental clinic",
         "service": "SA Dental",
+        "lhn_code": "SALHN",
         "address": "Level 1, 10 Milham Street",
         "suburb": "Oaklands Park",
         "postcode": "5046",
@@ -200,9 +241,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.542127, -35.013270]
+        "coordinates": [
+          138.542127,
+          -35.013270
+        ]
       }
     },
     {
@@ -211,6 +255,7 @@
         "name": "Marleston",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "229B Marion Road",
         "suburb": "Marleston",
         "postcode": "5033",
@@ -218,9 +263,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.554218, -34.945034]
+        "coordinates": [
+          138.554218,
+          -34.945034
+        ]
       }
     },
     {
@@ -229,6 +277,7 @@
         "name": "Millicent",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "LCLHN",
         "address": "17 Ninth Street",
         "suburb": "Millicent",
         "postcode": "5280",
@@ -236,9 +285,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [140.342106, -37.593187]
+        "coordinates": [
+          140.342106,
+          -37.593187
+        ]
       }
     },
     {
@@ -247,6 +299,7 @@
         "name": "Mitcham",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "SALHN",
         "address": "Mitcham Primary School, Elphyn Road",
         "suburb": "Kingswood",
         "postcode": "5062",
@@ -254,9 +307,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.616272, -34.972971]
+        "coordinates": [
+          138.616272,
+          -34.972971
+        ]
       }
     },
     {
@@ -265,6 +321,7 @@
         "name": "Modbury GP Plus",
         "site_type": "GP Plus dental clinic",
         "service": "SA Dental",
+        "lhn_code": "NALHN",
         "address": "77 Smart Road",
         "suburb": "Modbury",
         "postcode": "5092",
@@ -272,9 +329,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.692326, -34.833645]
+        "coordinates": [
+          138.692326,
+          -34.833645
+        ]
       }
     },
     {
@@ -283,6 +343,7 @@
         "name": "Mount Barker - Kids",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "BHFLHN",
         "address": "Mount Barker Primary School, 2A Dumas Street",
         "suburb": "Mount Barker",
         "postcode": "5251",
@@ -290,9 +351,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.853460, -35.067006]
+        "coordinates": [
+          138.853460,
+          -35.067006
+        ]
       }
     },
     {
@@ -301,6 +365,7 @@
         "name": "Mount Barker - Adults",
         "site_type": "Adult dental clinic",
         "service": "SA Dental",
+        "lhn_code": "BHFLHN",
         "address": "Mount Barker District Soldiers' Memorial Hospital, 87 Wellington Road",
         "suburb": "Mount Barker",
         "postcode": "5251",
@@ -308,9 +373,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.869940, -35.080352]
+        "coordinates": [
+          138.869940,
+          -35.080352
+        ]
       }
     },
     {
@@ -319,6 +387,7 @@
         "name": "Mount Gambier",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "LCLHN",
         "address": "Mount Gambier and Districts Health Service, 276-300 Wehl Street North",
         "suburb": "Mount Gambier",
         "postcode": "5290",
@@ -326,9 +395,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [140.785977, -37.805057]
+        "coordinates": [
+          140.785977,
+          -37.805057
+        ]
       }
     },
     {
@@ -337,6 +409,7 @@
         "name": "Murray Bridge",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "RMCLHN",
         "address": "45 Beatty Terrace",
         "suburb": "Murray Bridge",
         "postcode": "5253",
@@ -344,9 +417,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [139.279894, -35.127825]
+        "coordinates": [
+          139.279894,
+          -35.127825
+        ]
       }
     },
     {
@@ -355,6 +431,7 @@
         "name": "Naracoorte",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "LCLHN",
         "address": "Naracoorte Primary School, 41 Park Terrace",
         "suburb": "Naracoorte",
         "postcode": "5271",
@@ -362,9 +439,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [140.737856, -36.951334]
+        "coordinates": [
+          140.737856,
+          -36.951334
+        ]
       }
     },
     {
@@ -373,6 +453,7 @@
         "name": "Noarlunga GP Plus",
         "site_type": "GP Plus dental clinic",
         "service": "SA Dental",
+        "lhn_code": "SALHN",
         "address": "2 Alexander Kelly Drive",
         "suburb": "Noarlunga Centre",
         "postcode": "5168",
@@ -380,9 +461,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.497397, -35.139045]
+        "coordinates": [
+          138.497397,
+          -35.139045
+        ]
       }
     },
     {
@@ -391,6 +475,7 @@
         "name": "Pennington",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Pennington Primary School, Butler Avenue",
         "suburb": "Pennington",
         "postcode": "5013",
@@ -398,9 +483,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.532721, -34.857075]
+        "coordinates": [
+          138.532721,
+          -34.857075
+        ]
       }
     },
     {
@@ -409,6 +497,7 @@
         "name": "Port Adelaide",
         "site_type": "Adult dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Wonggangga Turtpandi Aboriginal Primary Health Care Services, 11 Church Street",
         "suburb": "Port Adelaide",
         "postcode": "5015",
@@ -416,9 +505,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.502760, -34.846841]
+        "coordinates": [
+          138.502760,
+          -34.846841
+        ]
       }
     },
     {
@@ -427,6 +519,7 @@
         "name": "Port Augusta",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "FUNLHN",
         "address": "Flinders and Far North Community Health Service, 36 Flinders Terrace",
         "suburb": "Port Augusta",
         "postcode": "5700",
@@ -434,9 +527,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [137.765412, -32.493171]
+        "coordinates": [
+          137.765412,
+          -32.493171
+        ]
       }
     },
     {
@@ -445,6 +541,7 @@
         "name": "Port Lincoln",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "EFNLHN",
         "address": "39 Oxford Terrace",
         "suburb": "Port Lincoln",
         "postcode": "5606",
@@ -452,9 +549,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [135.850294, -34.724224]
+        "coordinates": [
+          135.850294,
+          -34.724224
+        ]
       }
     },
     {
@@ -463,6 +563,7 @@
         "name": "Port Pirie",
         "site_type": "Adult dental clinic",
         "service": "SA Dental",
+        "lhn_code": "YNLHN",
         "address": "Port Pirie Regional Health Service, The Terrace",
         "suburb": "Port Pirie",
         "postcode": "5540",
@@ -470,9 +571,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.004454, -33.177029]
+        "coordinates": [
+          138.004454,
+          -33.177029
+        ]
       }
     },
     {
@@ -481,6 +585,7 @@
         "name": "Port Pirie West",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "YNLHN",
         "address": "Port Pirie West Primary School, 214 The Terrace",
         "suburb": "Port Pirie West",
         "postcode": "5540",
@@ -488,9 +593,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.002973, -33.181384]
+        "coordinates": [
+          138.002973,
+          -33.181384
+        ]
       }
     },
     {
@@ -499,6 +607,7 @@
         "name": "Prospect",
         "site_type": "Kids dental clinic",
         "service": "SA Dental",
+        "lhn_code": "CALHN",
         "address": "Prospect Primary School, Burrage Place",
         "suburb": "Prospect",
         "postcode": "5082",
@@ -506,9 +615,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.590791, -34.884427]
+        "coordinates": [
+          138.590791,
+          -34.884427
+        ]
       }
     },
     {
@@ -517,6 +629,7 @@
         "name": "Riverland (Berri)",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "RMCLHN",
         "address": "10 Maddern Avenue",
         "suburb": "Berri",
         "postcode": "5343",
@@ -524,9 +637,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [140.601086, -34.275874] 
+        "coordinates": [
+          140.601086,
+          -34.275874
+        ]
       }
     },
     {
@@ -535,6 +651,7 @@
         "name": "Salisbury",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "NALHN",
         "address": "21 Hollywood Boulevard",
         "suburb": "Salisbury Downs",
         "postcode": "5108",
@@ -542,9 +659,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.623651, -34.768976]
+        "coordinates": [
+          138.623651,
+          -34.768976
+        ]
       }
     },
     {
@@ -553,6 +673,7 @@
         "name": "Victor Harbor",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "BHFLHN",
         "address": "South Coast District Hospital, Bay Road",
         "suburb": "Victor Harbor",
         "postcode": "5211",
@@ -560,9 +681,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [138.607391, -35.560858]
+        "coordinates": [
+          138.607391,
+          -35.560858
+        ]
       }
     },
     {
@@ -571,6 +695,7 @@
         "name": "Wallaroo",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
+        "lhn_code": "YNLHN",
         "address": "Wallaroo Hospital and Health Services, 1 Ernest Terrace",
         "suburb": "Wallaroo",
         "postcode": "5556",
@@ -578,9 +703,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [137.636632, -33.928552]
+        "coordinates": [
+          137.636632,
+          -33.928552
+        ]
       }
     },
     {
@@ -589,6 +717,7 @@
         "name": "Whyalla",
         "site_type": "Oral health centre",
         "service": "SA Dental",
+        "lhn_code": "FUNLHN",
         "address": "Whyalla Oral Health Centre, 111 Nicolson Avenue",
         "suburb": "Whyalla Norrie",
         "postcode": "5608",
@@ -596,9 +725,12 @@
         "status": "Operating",
         "notes": ""
       },
-      "geometry": { 
+      "geometry": {
         "type": "Point",
-        "coordinates": [137.546723, -33.029228]
+        "coordinates": [
+          137.546723,
+          -33.029228
+        ]
       }
     }
   ]
