@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "name": "DASSA_Sites",
+  "metadata": {
+    "source": "SA HEALTH",
+    "source_url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/mental+health+and+drug+and+alcohol+services/drug+and+alcohol+services/drug+and+alcohol+services",
+    "prepared_date": "2026-07-30"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DASSA Central Services",
+        "service": "DRUG AND ALCOHOL SERVICES SOUTH AUSTRALIA",
+        "lhn_code": "CALHN",
+        "address": "91 Magill Road",
+        "suburb": "Stepney",
+        "postcode": "5069",
+        "phone": "(08) 7425 5000",
+        "status": "Operating"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.62987085254235,
+          -34.915182196663785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DASSA Northern Services",
+        "service": "DRUG AND ALCOHOL SERVICES SOUTH AUSTRALIA",
+        "lhn_code": "NALHN",
+        "address": "22 Langford Drive",
+        "suburb": "Elizabeth",
+        "postcode": "5112 ",
+        "phone": "(08) 7485 4600",
+        "status": "Operating"      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.66427528886584,
+          -34.719614850384495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DASSA Southern Services",
+        "service": "DRUG AND ALCOHOL SERVICES SOUTH AUSTRALIA",
+        "lhn_code": "SALHN",
+        "address": "1/209 Main South Rd",
+        "suburb": "Morphett Vale",
+        "postcode": "5162",
+        "phone": "(08) 8325 8111",
+        "status": "Operating"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.52215846381182,
+          -35.118470143987764
+        ]
+      }
+    }
+  ]
+}
