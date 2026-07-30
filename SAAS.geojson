@@ -2810,6 +2810,28 @@
     {
       "type": "Feature",
       "properties": {
+        "objectid": 753,
+        "featuretype": "EMERGENCY FACILITY",
+        "class": "AMBULANCE STATION",
+        "lhn_code": "RMCLHN",
+        "facility_name": "UPPER MURRAY MALLEE VOLUNTEER REGIONA RESPONSE TEAM",
+        "facility_operationalstatus": "OPERATIONAL",
+        "facility_address": "25 CORNWALL STREET",
+        "abs_suburb": "BERRI",
+        "facility_state": "SOUTH AUSTRALIA",
+        "abs_postcode": 5343,
+        "facility_source": "HTTP://WWW.SAAMBULANCE.COM.AU"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.602151,
+          -34.2774349
+        ]
+      },
+    {
+      "type": "Feature",
+      "properties": {
         "objectid": 752,
         "featuretype": "EMERGENCY FACILITY",
         "class": "AMBULANCE STATION",
