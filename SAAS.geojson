@@ -443,29 +443,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.53737,
-          -34.966342
-        ]
-      },
-      "properties": {
-        "objectid": 571,
-        "featuretype": "EMERGENCY FACILITY",
-        "class": "AMBULANCE STATION",
-        "lhn_code": "CALHN",
-        "facility_name": "CAMDEN PARK STATION",
-        "facility_operationalstatus": "OPERATIONAL",
-        "facility_address": "65-69 MORPHETT ROAD",
-        "abs_suburb": "CAMDEN PARK",
-        "facility_state": "SOUTH AUSTRALIA",
-        "abs_postcode": "5038",
-        "facility_source": "HTTP://WWW.SAAMBULANCE.COM.AU"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           138.537379,
           -34.966328
         ]
