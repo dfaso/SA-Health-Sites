@@ -451,7 +451,7 @@
         "objectid": 571,
         "featuretype": "EMERGENCY FACILITY",
         "class": "AMBULANCE STATION",
-        "lhn_code": "SALHN",
+        "lhn_code": "CALHN",
         "facility_name": "CAMDEN PARK STATION",
         "facility_operationalstatus": "OPERATIONAL",
         "facility_address": "65-69 MORPHETT ROAD",
