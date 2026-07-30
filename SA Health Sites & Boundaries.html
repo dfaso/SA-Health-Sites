@@ -450,6 +450,7 @@
         let hospitalData = null;
         let saasData = null;
         let dentalData = null;
+        let dassaData = null;
 
         let selectedFilter = {
             type: null,
@@ -459,7 +460,8 @@
         let visibleSiteCategories = new Set([
             "Hospital",
             "Ambulance",
-            "Dental"
+            "Dental",
+            "Dassa"
         ]);
 
         // ==================================================
@@ -489,9 +491,7 @@
             "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
             {
                 subdomains: "abcd",
-
                 maxZoom: 20,
-
                 attribution:
                     '&copy; <a href="https://www.openstreetmap.org/copyright">' +
                     "OpenStreetMap contributors</a> " +
@@ -499,26 +499,21 @@
                     "CARTO</a>"
             }
         );
-
-
         const openStreetMap = L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
             {
                 maxZoom: 19,
-
                 attribution:
                     '&copy; <a href="https://www.openstreetmap.org/copyright">' +
                     "OpenStreetMap contributors</a>"
             }
         );
 
-
         const esriSatellite = L.tileLayer(
             "https://server.arcgisonline.com/ArcGIS/rest/services/" +
             "World_Imagery/MapServer/tile/{z}/{y}/{x}",
             {
                 maxZoom: 19,
-
                 attribution:
                     "Tiles &copy; Esri and contributors"
             }
@@ -666,6 +661,37 @@
             }
         }).addTo(map);
 
+        const dassa = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#f6a23c",
+                    fillOpacity: 1
+                });
+            },
+
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                    `<strong>${p.name}</strong><br>
+                    ${p.address},<br>
+                    ${p.suburb}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+                });
+            }
+        }).addTo(map);
+
         function filterPointLayersByLhn(lhnCode) {
 
             function updateMarkerSizes() {
@@ -688,7 +714,7 @@
                     markerRadius = 7;
                     markerWeight = 2;
                 }
-                [hospital, SAAS, dental].forEach(function (siteLayer) {
+                [hospital, SAAS, dental, dassa].forEach(function (siteLayer) {
                     siteLayer.eachLayer(function (marker) {
                         if (marker.setRadius) {
                             marker.setRadius(markerRadius);
@@ -724,6 +750,7 @@
             hospital.clearLayers();
             SAAS.clearLayers();
             dental.clearLayers();
+            dassa.clearLayers();
 
             if (hospitalData?.features) {
                 hospital.addData({
@@ -741,6 +768,12 @@
                 dental.addData({
                     type: "FeatureCollection",
                     features: dentalData.features.filter(matchesLhn)
+                });
+            }
+            if (dassaData?.features) {
+                dassa.addData({
+                    type: "FeatureCollection",
+                    features: dassaData.features.filter(matchesLhn)
                 });
             }
         }
@@ -847,6 +880,17 @@
                 console.error("Unable to load SA Dental layer:", error);
             });
 
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/DASSA.geojson")
+            .then(response => response.json())
+            .then(data => {
+                dassaData = data;
+                dassa.addData(dassaData);
+                updateMarkerSizes();
+            })
+            .catch(error => {
+                console.error("Unable to load SA Dental layer:", error);
+            });
+
         // ==================================================
         // LOAD SITE TABLE CSV
         // ==================================================
@@ -913,6 +957,9 @@
 
             if (map.hasLayer(dental)) {
                 visibleSiteCategories.add("Dental");
+            }
+                        if (map.hasLayer(dassa)) {
+                visibleSiteCategories.add("Dassa");
             }
 
             renderTable();
@@ -1057,7 +1104,8 @@
             "Health Sites": {
                 "Hospitals": hospital,
                 "Ambulance Sites": SAAS,
-                "SA Dental": dental
+                "SA Dental": dental,
+                "Dassa": dassa
             }
         };
 
