@@ -155,7 +155,7 @@
         "lhn_code": "CALHN",
         "facility_name": "STATE HEADQUARTERS",
         "facility_operationalstatus": "OPERATIONAL",
-        "facility_address": "216 GREENHILL ROAD",
+        "facility_address": "205 GREENHILL ROAD",
         "abs_suburb": "EASTWOOD",
         "facility_state": "SOUTH AUSTRALIA",
         "abs_postcode": "5063",
@@ -2557,7 +2557,7 @@
     {
       "type": "Feature",
       "properties": {
-        "facility_name": "RRAS Base",
+        "facility_name": "SAAS - Rescue, Retrieval and Aviation Services Base",
         "lhn_code": "CALHN",
         "class": "AMBULANCE STATION",
         "featuretype": "EMERGENCY FACILITY",
@@ -2768,7 +2768,7 @@
         "featuretype": "EMERGENCY FACILITY",
         "class": "AMBULANCE STATION",
         "lhn_code": "SALHN",
-        "facility_name": "GLENGOWRIE STATION",
+        "facility_name": "GLENGOWRIE",
         "facility_operationalstatus": "OPERATIONAL",
         "facility_address": "88A MORPHETT ROAD",
         "abs_suburb": "GLENGOWRIE",
@@ -2791,7 +2791,7 @@
         "featuretype": "EMERGENCY FACILITY",
         "class": "AMBULANCE STATION",
         "lhn_code": "BHFLHN",
-        "facility_name": "BIRDWOOD STATION",
+        "facility_name": "BIRDWOOD",
         "facility_operationalstatus": "OPERATIONAL",
         "facility_address": "CORNER TORRENS VALLEY ROAD & BLUMEL ROAD",
         "abs_suburb": "BIRDWOOD",
@@ -2804,6 +2804,29 @@
         "coordinates": [
           138.9526356,
           -34.820389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "objectid": 752,
+        "featuretype": "EMERGENCY FACILITY",
+        "class": "AMBULANCE STATION",
+        "lhn_code": "LCLHN",
+        "facility_name": "BEACHPORT STATION",
+        "facility_operationalstatus": "OPERATIONAL",
+        "facility_address": "GOLFCOURSE ROAD",
+        "abs_suburb": "BEACHPORT",
+        "facility_state": "SOUTH AUSTRALIA",
+        "abs_postcode": 5280,
+        "facility_source": "HTTP://WWW.SAAMBULANCE.COM.AU"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.0098549,
+          -37.4767386
         ]
       }
     },
@@ -2827,28 +2850,6 @@
         "coordinates": [
           140.602151,
           -34.2774349
-        ]
-      },
-    {
-      "type": "Feature",
-      "properties": {
-        "objectid": 752,
-        "featuretype": "EMERGENCY FACILITY",
-        "class": "AMBULANCE STATION",
-        "lhn_code": "LCLHN",
-        "facility_name": "BEACHPORT STATION",
-        "facility_operationalstatus": "OPERATIONAL",
-        "facility_address": "GOLFCOURSE ROAD",
-        "abs_suburb": "BEACHPORT",
-        "facility_state": "SOUTH AUSTRALIA",
-        "abs_postcode": 5280,
-        "facility_source": "HTTP://WWW.SAAMBULANCE.COM.AU"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          140.0098549,
-          -37.4767386
         ]
       }
     }
