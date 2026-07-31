@@ -234,7 +234,7 @@ DASSA-003,DASSA Southern Services,Dassa,Drug and Alcohol Service,Drug and Alcoho
 SAPATH-001,Adelaide (SA Pathology Laboratory),SA Path,Pathology Laboratory,SA Path,Frome Road,Adelaide,5000,CALHN,,,SAPath
 SAPATH-002,Adelaide (Royal Adelaide Hospital),SA Path,Pathology Laboratory,SA Path,"Level 3H, Port Road",Adelaide,5000,CALHN,,,SAPath
 SAPATH-003,Bedford Park (Flinders Medical Centre),SA Path,Pathology Laboratory,SA Path,"Level 6, Room 6D101, Flinders Drive",Bedford Park,5042,SALHN,,,SAPath
-SAPATH-004,Elizabeth Vale (Lyell McEwin Health Service),SA Path,Pathology Laboratory,SA Path,Haydown Road,Elizabeth Vale,5112,BHFLHN,,,SAPath
+SAPATH-004,Elizabeth Vale (Lyell McEwin Health Service),SA Path,Pathology Laboratory,SA Path,Haydown Road,Elizabeth Vale,5112,NALHN,,,SAPath
 SAPATH-005,Gawler Health Service,SA Path,Pathology Laboratory,SA Path,Hutchinson Road,Gawler,5118,CALHN,,,SAPath
 SAPATH-006,Modbury Hospital,SA Path,Pathology Laboratory,SA Path,Smart Road,Modbury,5092,NALHN,,,SAPath
 SAPATH-007,Noarlunga Health Service,SA Path,Pathology Laboratory,SA Path,Alexander Kelly Drive,Noarlunga Centre,5168,SALHN,,,SAPath
