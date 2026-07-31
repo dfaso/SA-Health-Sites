@@ -534,17 +534,8 @@
                             </label>
                         </div>
                     </div>
-
-                    <div class="toolbar-search">
-                        <input type="search" id="siteSearchInput" placeholder="e.g. Roxby Downs" autocomplete="off">
-                    </div>
-
                     <button id="resetMapButton" type="button" class="toolbar-button">
                         Reset View
-                    </button>
-
-                    <button id="exportCsvButton" type="button" class="toolbar-button">
-                        Export CSV
                     </button>
                 </div>
             </div>
@@ -563,6 +554,13 @@
                             Loading site data...
                         </p>
                     </div>
+                    <div class="toolbar-search">
+                        Search Table
+                        <input type="search" id="siteSearchInput" placeholder="e.g. Roxby Downs" autocomplete="off">
+                    </div>
+                    <button id="exportCsvButton" type="button" class="toolbar-button">
+                        Export CSV
+                    </button>
                 </div>
 
                 <div class="site-table-wrapper">
@@ -1885,7 +1883,6 @@
                 resetMapView();
             }, 300);
         });
-
 
         // ==================================================
         // BROWSER WINDOW RESIZING
