@@ -1,0 +1,402 @@
+{
+  "type": "FeatureCollection",
+  "name": "SA_Pathology_Sites",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adelaide (Royal Adelaide Hospital)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Level 3H, Port Road",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.58662231821958,
+          -34.920419187552625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adelaide (SA Pathology Laboratory)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Frome Road",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.60811230745173,
+          -34.919740184172255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bedford Park (Flinders Medical Centre)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Level 6, Room 6D101, Flinders Drive",
+        "suburb": "Bedford Park",
+        "postcode": " 5042",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.5687787750957,
+          -35.02139743014562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elizabeth Vale (Lyell McEwin Health Service)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Haydown Road",
+        "suburb": "Elizabeth Vale",
+        "postcode": "5112",
+        "state": "SA",
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.66602313883484,
+          -34.7480001912386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gawler Health Service",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Hutchinson Road",
+        "suburb": "Gawler",
+        "postcode": "5118",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.75480770204317,
+          -34.5939697899348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modbury Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Smart Road",
+        "suburb": ", Modbury",
+        "postcode": "5092",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.69075274866609,
+          -34.83391475447247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Noarlunga Health Service",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Alexander Kelly Drive",
+        "suburb": "Noarlunga Centre",
+        "postcode": "5168",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.49873240948693,
+          -35.13948442294241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Adelaide (Women's and Children's Hospital)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "4th floor Rieger Building, King William Road (via Kermode Street Main Entrance)",
+        "suburb": "North Adelaide",
+        "postcode": "5006",
+        "state": "SA",
+        "lhn": "Women's and Children's Health Network",
+        "lhn_code": "WCHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.5998879192562,
+          -34.911894685367486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woodville (The Queen Elizabeth Hospital)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "28 Woodville Road",
+        "suburb": ",Woodville",
+        "postcode": "5011",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.53346582055383,
+          -34.88395272534189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berri Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Maddern Avenue",
+        "suburb": "Berri",
+        "postcode": "5343",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.60080922860354,
+          -34.27544413983096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Gambier Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Wehl Street North",
+        "suburb": "Mount Gambier",
+        "postcode": "5290",
+        "state": "SA",
+        "lhn": "Limestone Coast Local Health Network",
+        "lhn_code": "LCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.78626018471815,
+          -37.80538704877856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murray Bridge Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Swanport Road",
+        "suburb": "Murray Bridge",
+        "postcode": "5253",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.28076438069724,
+          -35.128653747515855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Augusta Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Hospital Road",
+        "suburb": ",Port Augusta",
+        "postcode": "5700",
+        "state": "SA",
+        "lhn": "Flinders and Upper North Local Health Network",
+        "lhn_code": "FUNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.77526028901838,
+          -32.509684648870035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Lincoln Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Oxford Terrace",
+        "suburb": "Port Lincoln",
+        "postcode": "5606",
+        "state": "SA",
+        "lhn": "Eyre and Far North Local Health Network",
+        "lhn_code": "EFNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.849834928809,
+          -34.724290759492085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Pirie Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Alexander Street",
+        "suburb": "Port Pirie",
+        "postcode": "5540",
+        "state": "SA",
+        "lhn": "Yorke and Northern Local Health Network",
+        "lhn_code": "YNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.00442558611542,
+          -33.177820055373246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Victor Harbor (South Coast District Hospital)",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Harbour View Terrace",
+        "suburb": "Victor Harbor",
+        "postcode": "5211",
+        "state": "SA",
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6077734252918,
+          -35.56105152535593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wallaroo Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Ernest Terrace",
+        "suburb": "Wallaroo",
+        "postcode": "5556",
+        "state": "SA",
+        "lhn": "Yorke and Northern Local Health Network",
+        "lhn_code": "YNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.63683330481106,
+          -33.9279979217771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whyalla Hospital",
+        "organisation": "SA Pathology",
+        "site_category": "Pathology",
+        "service": "Pathology Laboratory",
+        "address": "Wood Terrace",
+        "suburb": "Whyalla",
+        "postcode": "5600",
+        "state": "SA",
+        "lhn": "Flinders and Upper North Local Health Network",
+        "lhn_code": "FUNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.57682916110463,
+          -33.033965554420895
+]
+      }
+    }
+  ]
+}
