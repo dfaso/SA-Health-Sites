@@ -79,8 +79,8 @@
         "suburb": "Elizabeth Vale",
         "postcode": "5112",
         "state": "SA",
-        "lhn": "Barossa Hills Fleurieu Local Health Network",
-        "lhn_code": "BHFLHN"
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
       },
       "geometry": {
         "type": "Point",
