@@ -408,6 +408,11 @@
         /* ==================================================
            SMALL SCREENS
         ================================================== */
+        @media (min-width: 701px) and (max-width: 1200px) {
+            .summary-bar {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
 
         @media (max-width: 700px) {
             .main-header {
@@ -453,6 +458,175 @@
             .toolbar-dropdown-menu {
                 width: 210px;
             }
+
+            .summary-bar {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                margin: 15px;
+            }
+
+            .summary-card {
+                min-height: 68px;
+                padding: 12px;
+            }
+
+            .summary-value {
+                font-size: 22px;
+            }
+        }
+
+        /* ==================================================
+   MAP LEGEND
+================================================== */
+
+        .map-legend {
+            width: 210px;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid #bbbbbb;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 13px;
+        }
+
+        .map-legend-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .map-legend-title {
+            font-weight: bold;
+            color: #222222;
+        }
+
+        .map-legend-toggle {
+            padding: 2px 7px;
+            border: 1px solid #aaaaaa;
+            border-radius: 3px;
+            background-color: #f2f2f2;
+            color: #222222;
+            cursor: pointer;
+        }
+
+        .map-legend-toggle:hover {
+            background-color: #005eb8;
+            border-color: #005eb8;
+            color: white;
+        }
+
+        .map-legend-content {
+            margin-top: 9px;
+        }
+
+        .map-legend-content.collapsed {
+            display: none;
+        }
+
+        .map-legend-section-title {
+            margin: 9px 0 6px;
+            font-weight: bold;
+            color: #444444;
+        }
+
+        .map-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px 0;
+        }
+
+        .map-legend-marker {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px #999999;
+        }
+
+        .map-legend-area {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            border: 2px solid;
+            opacity: 0.7;
+        }
+
+        /* ==================================================
+   SUMMARY BAR
+================================================== */
+
+        .summary-bar {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(130px, 1fr));
+            gap: 12px;
+            box-sizing: border-box;
+            margin: 15px 25px 0;
+        }
+
+        .summary-card {
+            min-height: 76px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 9px;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .summary-total {
+            border-left: 5px solid #005eb8;
+        }
+
+        .summary-label {
+            grid-column: 2;
+            font-size: 22px;
+            font-weight: bold;
+            color: #222222;
+        }
+
+        .summary-value {
+            grid-column: 2;
+            font-size: 20px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        .summary-dot {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            width: 14px;
+            height: 14px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px #999999;
+        }
+
+        .hospital-dot {
+            background-color: #ff365e;
+        }
+
+        .ambulance-dot {
+            background-color: #34752e;
+        }
+
+        .dental-dot {
+            background-color: #014CC6;
+        }
+
+        .dassa-dot {
+            background-color: #f6a23c;
+        }
+
+        .sapath-dot {
+            background-color: #E9E92F;
         }
     </style>
 </head>
@@ -537,17 +711,58 @@
                             </label>
                         </div>
                     </div>
+                    <div class="toolbar-search">
+                        <input type="search" id="siteSearchInput" placeholder="e.g. Roxby Downs" autocomplete="off">
+                    </div>
                     <button id="resetMapButton" type="button" class="toolbar-button">
                         Reset View
                     </button>
                 </div>
             </div>
 
+            <section class="summary-bar" aria-label="Site summary">
+                <div class="summary-card summary-total">
+                    <span class="summary-label">Total Sites</span>
+                    <span id="summaryTotal" class="summary-value">0</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-dot hospital-dot"></span>
+                    <span class="summary-label">Hospitals</span>
+                    <span id="summaryHospital" class="summary-value">0</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-dot ambulance-dot"></span>
+                    <span class="summary-label">Ambulance</span>
+                    <span id="summaryAmbulance" class="summary-value">0</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-dot dental-dot"></span>
+                    <span class="summary-label">Dental</span>
+                    <span id="summaryDental" class="summary-value">0</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-dot dassa-dot"></span>
+                    <span class="summary-label">DASSA</span>
+                    <span id="summaryDassa" class="summary-value">0</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-dot sapath-dot"></span>
+                    <span class="summary-label">SA Pathology</span>
+                    <span id="summarySaPath" class="summary-value">0</span>
+                </div>
+            </section>
+
             <div class="map-area">
                 <div class="map-frame">
                     <div id="map"></div>
                 </div>
             </div>
+
 
             <section id="siteTableSection">
                 <div class="site-table-header">
@@ -557,10 +772,7 @@
                             Loading site data...
                         </p>
                     </div>
-                    <div class="toolbar-search">
-                        Search Table
-                        <input type="search" id="siteSearchInput" placeholder="e.g. Roxby Downs" autocomplete="off">
-                    </div>
+
                     <button id="exportCsvButton" type="button" class="toolbar-button">
                         Export CSV
                     </button>
@@ -1578,6 +1790,50 @@
             });
         }
 
+        function updateSummaryBar(filteredSites) {
+
+            const counts = {
+                Hospital: 0,
+                Ambulance: 0,
+                Dental: 0,
+                Dassa: 0,
+                "SA Path": 0
+            };
+
+            filteredSites.forEach(function (site) {
+
+                const category =
+                    String(site.site_category || "").trim();
+
+                if (Object.prototype.hasOwnProperty.call(counts, category)) {
+                    counts[category] += 1;
+                }
+            });
+
+            document.getElementById(
+                "summaryTotal"
+            ).textContent = filteredSites.length;
+
+            document.getElementById(
+                "summaryHospital"
+            ).textContent = counts.Hospital;
+
+            document.getElementById(
+                "summaryAmbulance"
+            ).textContent = counts.Ambulance;
+
+            document.getElementById(
+                "summaryDental"
+            ).textContent = counts.Dental;
+
+            document.getElementById(
+                "summaryDassa"
+            ).textContent = counts.Dassa;
+
+            document.getElementById(
+                "summarySaPath"
+            ).textContent = counts["SA Path"];
+        }
 
         function renderTable() {
 
@@ -1639,6 +1895,8 @@
                     site.site_name === selectedFilter.value
                 );
             }
+
+            updateSummaryBar(filteredSites);
 
             filteredSites.forEach(site => {
 
@@ -1933,6 +2191,145 @@
             imperial: false,
             position: "bottomleft"
         }).addTo(map);
+
+        // ==================================================
+        // MAP LEGEND
+        // ==================================================
+
+        const mapLegend = L.control({
+            position: "bottomright"
+        });
+
+        mapLegend.onAdd = function () {
+
+            const legend =
+                L.DomUtil.create(
+                    "div",
+                    "map-legend"
+                );
+
+            legend.innerHTML = `
+        <div class="map-legend-header">
+            <span class="map-legend-title">Map Legend</span>
+
+            <button
+                type="button"
+                class="map-legend-toggle"
+                aria-expanded="true"
+                aria-label="Collapse map legend"
+            >
+                −
+            </button>
+        </div>
+
+        <div class="map-legend-content">
+
+            <div class="map-legend-section-title">
+                Health Sites
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #ff365e;"
+                ></span>
+                Hospitals
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #34752e;"
+                ></span>
+                Ambulance Sites
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #014CC6;"
+                ></span>
+                SA Dental
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #f6a23c;"
+                ></span>
+                DASSA
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #E9E92F;"
+                ></span>
+                SA Pathology
+            </div>
+
+            <div class="map-legend-section-title">
+                Local Health Networks
+            </div>
+
+            ${Object.entries(lhnColours)
+                    .filter(([code]) => code !== "default")
+                    .map(([code, colour]) => `
+                    <div class="map-legend-item">
+                        <span
+                            class="map-legend-area"
+                            style="
+                                background-color: ${colour};
+                                border-color: ${colour};
+                            "
+                        ></span>
+                        ${code}
+                    </div>
+                `)
+                    .join("")}
+
+        </div>
+    `;
+
+            L.DomEvent.disableClickPropagation(legend);
+            L.DomEvent.disableScrollPropagation(legend);
+
+            const toggleButton =
+                legend.querySelector(".map-legend-toggle");
+
+            const legendContent =
+                legend.querySelector(".map-legend-content");
+
+            toggleButton.addEventListener(
+                "click",
+                function () {
+
+                    const isCollapsed =
+                        legendContent.classList.toggle(
+                            "collapsed"
+                        );
+
+                    toggleButton.textContent =
+                        isCollapsed ? "+" : "−";
+
+                    toggleButton.setAttribute(
+                        "aria-expanded",
+                        String(!isCollapsed)
+                    );
+
+                    toggleButton.setAttribute(
+                        "aria-label",
+                        isCollapsed
+                            ? "Expand map legend"
+                            : "Collapse map legend"
+                    );
+                }
+            );
+
+            return legend;
+        };
+
+        mapLegend.addTo(map);
 
         // ==================================================
         // RESET MAP
