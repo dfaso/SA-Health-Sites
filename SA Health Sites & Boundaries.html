@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet"
         href="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
     <style>
         /* ==================================================
@@ -150,6 +148,7 @@
         .leaflet-interactive:focus-visible {
             outline: none !important;
         }
+
 
         /* ==================================================
         SITE TABLE
@@ -532,6 +531,10 @@
                                 <input type="checkbox" data-map-layer="dassa" checked>
                                 DASSA
                             </label>
+                            <label>
+                                <input type="checkbox" data-map-layer="sapath" checked>
+                                SA Pathology
+                            </label>
                         </div>
                     </div>
                     <button id="resetMapButton" type="button" class="toolbar-button">
@@ -591,7 +594,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/overlapping-marker-spiderfier-leaflet@0.2.7/oms.min.js"></script>
 
     <script>
 
@@ -613,6 +615,7 @@
         let saasData = null;
         let dentalData = null;
         let dassaData = null;
+        let sapathData = null;
 
         let selectedFilter = {
             type: null,
@@ -623,7 +626,8 @@
             "Hospital",
             "Ambulance",
             "Dental",
-            "Dassa"
+            "Dassa",
+            "SA Path"
         ]);
 
         // ==================================================
@@ -662,7 +666,6 @@
                     "OpenStreetMap contributors</a>"
             }
         );
-
         const esriSatellite = L.tileLayer(
             "https://server.arcgisonline.com/ArcGIS/rest/services/" +
             "World_Imagery/MapServer/tile/{z}/{y}/{x}",
@@ -736,7 +739,7 @@
                     );
                 });
             }
-        }).addTo(map);
+        });
 
         const SAAS = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
@@ -773,7 +776,7 @@
                     );
                 });
             }
-        }).addTo(map);
+        });
 
         const dental = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
@@ -810,7 +813,7 @@
                     );
                 });
             }
-        }).addTo(map);
+        });
 
         const dassa = L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
@@ -847,45 +850,89 @@
                     );
                 });
             }
-        }).addTo(map);
+        });
 
-        function filterPointLayersByLhn(lhnCode) {
+        const sapath = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#E9E92F",
+                    fillOpacity: 1
+                });
+            },
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                    `<strong>SA Pathoogy - ${p.name}</strong><br>
+                    ${p.address},<br>
+                    ${p.suburb}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
 
-            function updateMarkerSizes() {
-                const zoom = map.getZoom();
-                let markerRadius;
-                let markerWeight;
-                if (zoom <= 6) {
-                    markerRadius = 4;
-                    markerWeight = 1;
-                }
-                else if (zoom <= 8) {
-                    markerRadius = 5;
-                    markerWeight = 1.5;
-                }
-                else if (zoom <= 10) {
-                    markerRadius = 6;
-                    markerWeight = 2;
-                }
-                else {
-                    markerRadius = 7;
-                    markerWeight = 2;
-                }
-                [hospital, SAAS, dental, dassa].forEach(function (siteLayer) {
-                    siteLayer.eachLayer(function (marker) {
-                        if (marker.setRadius) {
-                            marker.setRadius(markerRadius);
-                            marker.setStyle({
-                                weight: markerWeight
-                            });
-                        }
-                    });
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+
+                    selectTableSiteFromMarker(
+                        p,
+                        "SA Path"
+                    );
                 });
             }
+        });
 
-            map.on("zoomend", function () {
-                updateMarkerSizes();
+        // ==================================================
+        // ADD POINT LAYERS TO MAP
+        // ==================================================
+
+        hospital.addTo(map);
+        SAAS.addTo(map);
+        dental.addTo(map);
+        dassa.addTo(map);
+        sapath.addTo(map);
+
+        function updateMarkerSizes() {
+            const zoom = map.getZoom();
+            let markerRadius;
+            let markerWeight;
+            if (zoom <= 6) {
+                markerRadius = 4;
+                markerWeight = 1;
+            }
+            else if (zoom <= 8) {
+                markerRadius = 5;
+                markerWeight = 1.5;
+            }
+            else if (zoom <= 10) {
+                markerRadius = 6;
+                markerWeight = 2;
+            }
+            else {
+                markerRadius = 7;
+                markerWeight = 2;
+            }
+            [hospital, SAAS, dental, dassa, sapath].forEach(function (siteLayer) {
+                siteLayer.eachLayer(function (marker) {
+                    if (marker.setRadius) {
+                        marker.setRadius(markerRadius);
+                        marker.setStyle({
+                            weight: markerWeight
+                        });
+                    }
+                });
             });
+        }
+
+        map.on("zoomend", updateMarkerSizes);
+
+        function filterPointLayersByLhn(lhnCode) {
 
             const selectedCode = String(lhnCode || "")
                 .trim()
@@ -908,6 +955,7 @@
             SAAS.clearLayers();
             dental.clearLayers();
             dassa.clearLayers();
+            sapath.clearLayers();
 
             if (hospitalData?.features) {
                 hospital.addData({
@@ -933,6 +981,14 @@
                     features: dassaData.features.filter(matchesLhn)
                 });
             }
+            if (sapathData?.features) {
+                sapath.addData({
+                    type: "FeatureCollection",
+                    features: sapathData.features.filter(matchesLhn)
+                });
+            }
+
+            updateMarkerSizes();
         }
 
         // ==================================================
@@ -1064,7 +1120,10 @@
             .then(response => response.json())
             .then(data => {
                 hospitalData = data;
+
+                hospital.clearLayers();
                 hospital.addData(hospitalData);
+
                 updateMarkerSizes();
             })
             .catch(error => {
@@ -1075,7 +1134,10 @@
             .then(response => response.json())
             .then(data => {
                 saasData = data;
+
+                SAAS.clearLayers();
                 SAAS.addData(saasData);
+
                 updateMarkerSizes();
             })
             .catch(error => {
@@ -1099,7 +1161,10 @@
             .then(response => response.json())
             .then(data => {
                 dentalData = data;
+
+                dental.clearLayers();
                 dental.addData(dentalData);
+
                 updateMarkerSizes();
             })
             .catch(error => {
@@ -1110,11 +1175,28 @@
             .then(response => response.json())
             .then(data => {
                 dassaData = data;
+
+                dassa.clearLayers();
                 dassa.addData(dassaData);
+
                 updateMarkerSizes();
             })
             .catch(error => {
                 console.error("Unable to load SA Dental layer:", error);
+            });
+
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAPath.geojson")
+            .then(response => response.json())
+            .then(data => {
+                sapathData = data;
+
+                sapath.clearLayers();
+                sapath.addData(sapathData);
+
+                updateMarkerSizes();
+            })
+            .catch(error => {
+                console.error("Unable to load SA Path layer:", error);
             });
 
         // ==================================================
@@ -1187,7 +1269,9 @@
             if (map.hasLayer(dassa)) {
                 visibleSiteCategories.add("Dassa");
             }
-
+            if (map.hasLayer(sapath)) {
+                visibleSiteCategories.add("SA Path");
+            }
             renderTable();
         }
 
@@ -1365,12 +1449,29 @@
             const targetAddress = normaliseSiteText(site.address);
             const targetSuburb = normaliseSiteText(site.suburb);
 
-            const siteLayers = [
-                hospital,
-                SAAS,
-                dental,
-                dassa
-            ];
+            const categoryLayers = {
+                Hospital: hospital,
+                Ambulance: SAAS,
+                Dental: dental,
+                Dassa: dassa,
+                "SA Path": sapath
+            };
+
+            const selectedLayer =
+                categoryLayers[
+                String(site.site_category || "").trim()
+                ];
+
+            const siteLayers =
+                selectedLayer
+                    ? [selectedLayer]
+                    : [
+                        hospital,
+                        SAAS,
+                        dental,
+                        dassa,
+                        sapath
+                    ];
 
             let matchingMarker = null;
             let matchingParentLayer = null;
@@ -1694,7 +1795,8 @@
             hospital: hospital,
             saas: SAAS,
             dental: dental,
-            dassa: dassa
+            dassa: dassa,
+            sapath: sapath
         };
 
         const toolbarBaseMaps = {
@@ -1785,6 +1887,9 @@
                             map.removeLayer(mapLayer);
                         }
                     }
+
+                    // Refresh table based on visible layers
+                    updateVisibleSiteCategories();
                 });
             });
 
@@ -1818,14 +1923,6 @@
                     }
                 });
             });
-
-        map.on("overlayadd", function () {
-            updateVisibleSiteCategories();
-        });
-
-        map.on("overlayremove", function () {
-            updateVisibleSiteCategories();
-        });
 
         // ==================================================
         // SCALE
