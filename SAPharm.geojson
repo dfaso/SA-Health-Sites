@@ -1,0 +1,446 @@
+{
+  "type": "FeatureCollection",
+  "name": "SA_Pathology_Sites",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flinders Medical Centre",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Flinders Drive",
+        "suburb": "Bedford Park",
+        "postcode": "5042",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.56909417573146,
+          -35.02265986237065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gawler Health Service",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "21 Hutchinson Road",
+        "suburb": "Gawler East",
+        "postcode": "5118",
+        "state": "SA",
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.75515953176443, 
+          -34.59325843381186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glenside Health Campus (Inpatient Rehab Services Building",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "2 Karrayarta Drive",
+        "suburb": "Glenside",
+        "postcode": " 5065",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.62933410092032,
+          -34.945083656564016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hampstead Rehabilitation Centre (HRC)",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "205-207 Hampstead Road",
+        "suburb": "Lightsview",
+        "postcode": "5085",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.62015926365254,
+          -34.86124353347438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lyell McEwin Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "120-130 Haydown Road",
+        "suburb": "Elizabeth Vale",
+        "postcode": "5112",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.66455636916618,
+          -34.747434541723585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modbury Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Smart Road",
+        "suburb": "Modbury",
+        "postcode": "5092",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.69044994123513,
+          -34.83400927177331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Barker District Soilder's Memorial Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "87 Wellington Road",
+        "suburb": "Mount Barker",
+        "postcode": "5251",
+        "state": "SA",
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.87005406741827,
+          -35.08206357323719 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Gambier Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "276-300 Wehl Street North",
+        "suburb": "Mount Gambier",
+        "postcode": "5290",
+        "state": "SA",
+        "lhn": "Limestone Coast Local Health Network",
+        "lhn_code": "LCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.78649094412302,
+          -37.805471839517956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murray Bridge Soldiers' Memorial Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "96 Swanport Road",
+        "suburb": "Murray Bridge",
+        "postcode": "5253",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.2805397584321,
+          -35.12897203566925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Noarlunga Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Alexander Kelly Drive",
+        "suburb": "Noarlunga",
+        "postcode": "5168",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.50013000376774,
+          -35.139848966489446 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Augusta Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "71 Hospital Road",
+        "suburb": "Port Augusta",
+        "postcode": "5700",
+        "state": "SA",
+        "lhn": "Flinders and Upper North Local Health Network",
+        "lhn_code": "FUNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7755991250102,
+          -32.51014738477463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Lincoln Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "39 Oxford Terrace",
+        "suburb": "Port Lincoln",
+        "postcode": "5606",
+        "state": "SA",
+        "lhn": "Eyre and Far North Local Health Network",
+        "lhn_code": "EFNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.85021182821828,
+          -34.724114644844185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Pirie Regional Health Service",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Alexander Street",
+        "suburb": "Port Pirie",
+        "postcode": "5540",
+        "state": "SA",
+        "lhn": "Yorke and Northern Local Health Network",
+        "lhn_code": "YNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.00475441084953,
+          -33.17761326872319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Repat Health Precinct Pharmacy",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "216 Daws Road",
+        "suburb": "Daw Park",
+        "postcode": "5041",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.5879779582266,
+          -34.990502713581165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverland General Hospital (Berri)",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "10 Maddern Street",
+        "suburb": "Berri",
+        "postcode": "5343",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.601017177263,
+          -34.275961577724345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Royal Adelaide Hospital (RAH)",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Port Road",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.58757987138267,
+          -34.92111586144359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Victor Harbor Hospital (Southern Fleurieu Health Service)",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Harbour View Terrace",
+        "suburb": "Victor Harbor",
+        "postcode": "5211",
+        "state": "SA",
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.60679460426272,
+          -35.56132354368669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Queen Elizabeth Hospital (TQEH)",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "28 Woodville Road",
+        "suburb": "Woodville South",
+        "postcode": "5011",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.53294954227417,
+          -34.88390752435107
+]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whyalla Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "20 Wood Terrace",
+        "suburb": "Whyalla",
+        "postcode": "5600",
+        "state": "SA",
+        "lhn": "Flinders and Upper North Local Health Network",
+        "lhn_code": "FUNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.57711179560863,
+          -33.034216338921844
+]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Women's and Children's Hospital",
+        "organisation": "SA Pharmacy",
+        "site_category": "Pharmacy",
+        "service": "Site Dispensary",
+        "address": "Wood Terrace",
+        "suburb": "Whyalla",
+        "postcode": "5600",
+        "state": "SA",
+        "lhn": "Women's & Children's Health Network",
+        "lhn_code": "WCHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.59868131329245,
+          -34.9111744470409
+]
+      }
+    }
+  ]
+}
