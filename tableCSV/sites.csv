@@ -17,7 +17,7 @@ HOSP-015,Elliston Hospital,Hospital,Public Hospital,SA Health,4-6 Memorial Drive
 HOSP-016,Eudunda Hospital,Hospital,Public Hospital,SA Health,40 Ward Street,Eudunda,5374,BHFLHN,,Emergency Service,Public Hospitals
 HOSP-017,Flinders Medical Centre,Hospital,Public Hospital,SA Health,Flinders Drive,Bedford Park,5042,SALHN,,Emergency Department,Public Hospitals
 HOSP-018,Gawler Health Service,Hospital,Public Hospital,SA Health,21 Hutchinson Road,Gawler East,5118,BHFLHN,,Emergency Department,Public Hospitals
-HOSP-019,Glenside Health Services,Hospital,Public Psychiatric Hospital,SA Health,226 Fullarton Road,Glenside,5065,CALHN,,No,Public Hospitals
+HOSP-019,Glenside Health Services,Hospital,Public Psychiatric Hospital,SA Health,Karrayarta Drive,Glenside,5065,CALHN,,No,Public Hospitals
 HOSP-020,Gumeracha District Soldiers' Memorial Hospital,Hospital,Public Hospital,SA Health,2 Albert Street,Gumeracha,5233,BHFLHN,,Emergency Service,Public Hospitals
 HOSP-021,Hampstead Rehabilitation Centre,Hospital,Public Rehabilitation Hospital,SA Health,205-207 Hampstead Road,Lightsview,5085,NALHN,,No,Public Hospitals
 HOSP-022,Hawker Memorial Hospital,Hospital,Public Hospital,SA Health,9 Druid Range Drive,Hawker,5434,FUNLHN,,Emergency Service,Public Hospitals
@@ -41,7 +41,7 @@ HOSP-039,Mount Gambier and Districts Health Service,Hospital,Public Hospital,SA 
 HOSP-040,Mount Pleasant District Hospital,Hospital,Public Hospital,SA Health,28 Hospital Road,Mount Pleasant,5235,BHFLHN,,Emergency Service,Public Hospitals
 HOSP-041,Murray Bridge Soldiers' Memorial Hospital,Hospital,Public Hospital,SA Health,96 Swanport Road,Murray Bridge,5253,RMCLHN,,Emergency Department,Public Hospitals
 HOSP-042,Naracoorte Health Service,Hospital,Public Hospital,SA Health,101 Jenkins Terrace,Naracoorte,5271,LCLHN,,Emergency Service,Public Hospitals
-HOSP-043,Noarlunga Hospital,Hospital,Public Hospital,SA Health,Alexander Kelly Drive,Noarlunga Centre,5168,SALHN,,Emergency Department,Public Hospitals
+HOSP-043,Noarlunga Hospital,Hospital,Public Hospital,SA Health,Alexander Kelly Drive,Noarlunga,5168,SALHN,,Emergency Department,Public Hospitals
 HOSP-044,Northern Yorke Peninsula Health Service (Wallaroo),Hospital,Public Hospital,SA Health,1 Ernest Terrace,Wallaroo,5556,YNLHN,,Emergency Service,Public Hospitals
 HOSP-045,Orroroo and District Health Service,Hospital,Public Hospital,SA Health,Pekina Road,Orroroo,5431,YNLHN,,Emergency Service,Public Hospitals
 HOSP-046,Penola War Memorial Hospital,Hospital,Public Hospital,SA Health,18 Church Street,Penola,5277,LCLHN,,Emergency Service,Public Hospitals
@@ -59,7 +59,7 @@ HOSP-057,Riverton District Soldiers' Memorial Hospital,Hospital,Public Hospital,
 HOSP-058,Roxby Downs Health Service,Hospital,Public Hospital,SA Health,16-28 Burgoyne Street,Roxby Downs,5725,FUNLHN,,Emergency Service,Public Hospitals
 HOSP-059,Royal Adelaide Hospital,Hospital,Public Hospital,SA Health,Port Road,Adelaide,5000,CALHN,,Emergency Department,Public Hospitals
 HOSP-060,Snowtown Hospital and Health Service,Hospital,Public Hospital,SA Health,South Terrace,Snowtown,5520,YNLHN,,Emergency Service,Public Hospitals
-HOSP-061,South Coast District Hospital,Hospital,Public Hospital,SA Health,Bay Road,Victor Harbor,5211,BHFLHN,,Emergency Department,Public Hospitals
+HOSP-061,Victor Harbor Hospital (Southern Fleurieu Health Service),Hospital,Public Hospital,SA Health,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,Emergency Department,Public Hospitals
 HOSP-062,Southern Yorke Peninsula Health Service (Yorketown),Hospital,Public Hospital,SA Health,19 Waterloo Bay Road,Yorketown,5576,YNLHN,,Emergency Service,Public Hospitals
 HOSP-063,Strathalbyn and District Health Service,Hospital,Public Hospital,SA Health,14 Alfred Place,Strathalbyn,5255,BHFLHN,,Emergency Service,Public Hospitals
 HOSP-064,Streaky Bay Hospital,Hospital,Public Hospital,SA Health,1 Flinders Drive,Streaky Bay,5680,EFNLHN,,Emergency Service,Public Hospitals
@@ -187,7 +187,7 @@ DENT-002,Angle Park (Parks),Dental,Community dental clinic,SA Dental,"Parks Comm
 DENT-003,Elizabeth GP Plus,Dental,GP Plus dental clinic,SA Dental,16 Playford Boulevard,Elizabeth,5112,NALHN,Operating,(08) 7485 4269,SA Dental
 DENT-004,Evanston,Dental,Kids dental clinic,SA Dental,20 Para Road,Evanston,5116,BHFLHN,Operating,(08) 7485 4269,SA Dental
 DENT-005,Fulham Gardens,Dental,Kids dental clinic,SA Dental,Mitton Avenue,Henley Beach,5022,CALHN,Operating,(08) 7117 4000,SA Dental
-DENT-006,Gawler,Dental,Community dental clinic,SA Dental,"Gawler Health Service, 21 Hutchinson Road",Gawler East,5118,BHFLHN,Operating,(08) 7485 4269,SA Dental
+DENT-006,Gawler,Dental,Community dental clinic,SA Dental,21 Hutchinson Road,Gawler East,5118,BHFLHN,Operating,(08) 7485 4269,SA Dental
 DENT-007,Gilles Plains,Dental,Adult dental clinic,SA Dental,"TAFE SA, 33 Blacks Road",Gilles Plains,5086,NALHN,Operating,(08) 8207 1222,SA Dental
 DENT-008,Hendon,Dental,Kids dental clinic,SA Dental,162 Cedar Avenue,Royal Park,5014,CALHN,Operating,(08) 7117 4000,SA Dental
 DENT-009,Linden Park,Dental,Kids dental clinic,SA Dental,5 Highfield Avenue,St Georges,5064,CALHN,Operating,(08) 7425 8850,SA Dental
@@ -202,7 +202,7 @@ DENT-017,Mount Barker - Adults,Dental,Adult dental clinic,SA Dental,"Mount Barke
 DENT-018,Mount Gambier,Dental,Community dental clinic,SA Dental,"Mount Gambier and Districts Health Service, 276-300 Wehl Street North",Mount Gambier,5290,LCLHN,Operating,(08) 8721 1633,SA Dental
 DENT-019,Murray Bridge,Dental,Community dental clinic,SA Dental,45 Beatty Terrace,Murray Bridge,5253,RMCLHN,Operating,(08) 7117 4490,SA Dental
 DENT-020,Naracoorte,Dental,Community dental clinic,SA Dental,"Naracoorte Primary School, 41 Park Terrace",Naracoorte,5271,LCLHN,Operating,(08) 8762 2614,SA Dental
-DENT-021,Noarlunga GP Plus,Dental,GP Plus dental clinic,SA Dental,2 Alexander Kelly Drive,Noarlunga Centre,5168,SALHN,Operating,(08) 8384 9244,SA Dental
+DENT-021,Noarlunga GP Plus,Dental,GP Plus dental clinic,SA Dental,2 Alexander Kelly Drive,Noarlunga,5168,SALHN,Operating,(08) 8384 9244,SA Dental
 DENT-022,Pennington,Dental,Kids dental clinic,SA Dental,"Pennington Primary School, Butler Avenue",Pennington,5013,CALHN,Operating,(08) 8243 5629,SA Dental
 DENT-023,Port Adelaide,Dental,Adult dental clinic,SA Dental,"Wonggangga Turtpandi Aboriginal Primary Health Care Services, 11 Church Street",Port Adelaide,5015,CALHN,Operating,(08) 8243 5629,SA Dental
 DENT-024,Port Augusta,Dental,Community dental clinic,SA Dental,"Flinders and Far North Community Health Service, 36 Flinders Terrace",Port Augusta,5700,FUNLHN,Operating,(08) 8668 7840,SA Dental
@@ -212,7 +212,7 @@ DENT-027,Port Pirie West,Dental,Kids dental clinic,SA Dental,"Port Pirie West Pr
 DENT-028,Prospect,Dental,Kids dental clinic,SA Dental,"Prospect Primary School, Burrage Place",Prospect,5082,CALHN,Operating,(08) 7117 4000,SA Dental
 DENT-029,Riverland (Berri),Dental,Community dental clinic,SA Dental,10 Maddern Avenue,Berri,5343,RMCLHN,Operating,(08) 8580 2700,SA Dental
 DENT-030,Salisbury,Dental,Community dental clinic,SA Dental,21 Hollywood Boulevard,Salisbury Downs,5108,NALHN,Operating,(08) 7485 4700,SA Dental
-DENT-031,Victor Harbor,Dental,Community dental clinic,SA Dental,"South Coast District Hospital, Bay Road",Victor Harbor,5211,BHFLHN,Operating,(08) 8551 0460,SA Dental
+DENT-031,Victor Harbor Hospital (Southern Fleurieu Health Service),Dental,Community dental clinic,SA Dental,Harbour View Terrace,Victor Harbor,5211,BHFLHN,Operating,(08) 8551 0460,SA Dental
 DENT-032,Wallaroo,Dental,Community dental clinic,SA Dental,"Wallaroo Hospital and Health Services, 1 Ernest Terrace",Wallaroo,5556,YNLHN,Operating,(08) 7117 4492,SA Dental
 DENT-033,Whyalla,Dental,Oral health centre,SA Dental,"Whyalla Oral Health Centre, 111 Nicolson Avenue",Whyalla Norrie,5608,FUNLHN,Operating,(08) 7117 4493,SA Dental
 SAAS-689,RRAS Base,Ambulance,AMBULANCE STATION,SA Ambulance Service,"ADELAIDE AIRPORT, 2 SIR REGINALD ANSETT DRIVE",ADELAIDE AIRPORT,5950,CALHN,OPERATIONAL,"An emergency management facility from which a particular agency’s resources are commanded, coordinated and assigned to an incident or emergency",SAAS
@@ -235,9 +235,9 @@ SAPATH-001,Adelaide (SA Pathology Laboratory),SA Path,Pathology Laboratory,SA Pa
 SAPATH-002,Adelaide (Royal Adelaide Hospital),SA Path,Pathology Laboratory,SA Path,"Level 3H, Port Road",Adelaide,5000,CALHN,,,SAPath
 SAPATH-003,Bedford Park (Flinders Medical Centre),SA Path,Pathology Laboratory,SA Path,"Level 6, Room 6D101, Flinders Drive",Bedford Park,5042,SALHN,,,SAPath
 SAPATH-004,Elizabeth Vale (Lyell McEwin Health Service),SA Path,Pathology Laboratory,SA Path,Haydown Road,Elizabeth Vale,5112,NALHN,,,SAPath
-SAPATH-005,Gawler Health Service,SA Path,Pathology Laboratory,SA Path,Hutchinson Road,Gawler,5118,CALHN,,,SAPath
+SAPATH-005,Gawler Health Service,SA Path,Pathology Laboratory,SA Path,21 Hutchinson Road,Gawler,5118,BHFLHN,,,SAPath
 SAPATH-006,Modbury Hospital,SA Path,Pathology Laboratory,SA Path,Smart Road,Modbury,5092,NALHN,,,SAPath
-SAPATH-007,Noarlunga Health Service,SA Path,Pathology Laboratory,SA Path,Alexander Kelly Drive,Noarlunga Centre,5168,SALHN,,,SAPath
+SAPATH-007,Noarlunga Health Service,SA Path,Pathology Laboratory,SA Path,Alexander Kelly Drive,Noarlunga,5168,SALHN,,,SAPath
 SAPATH-008,North Adelaide (Women's and Children's Hospital),SA Path,Pathology Laboratory,SA Path,"4th floor Rieger Building, King William Road (via Kermode Street Main Entrance)",North Adelaide,5006,WCHN,,,SAPath
 SAPATH-009,Woodville (The Queen Elizabeth Hospital),SA Path,Pathology Laboratory,SA Path,28 Woodville Road,Woodville,5011,CALHN,,,SAPath
 SAPATH-010,Berri Hospital,SA Path,Pathology Laboratory,SA Path,Maddern Avenue,Berri,5343,RMCLHN,,,SAPath
@@ -246,6 +246,6 @@ SAPATH-012,Murray Bridge Hospital,SA Path,Pathology Laboratory,SA Path,Swanport 
 SAPATH-013,Port Augusta Hospital,SA Path,Pathology Laboratory,SA Path,Hospital Road,Port Augusta,5700,FUNLHN,,,SAPath
 SAPATH-014,Port Lincoln Hospital,SA Path,Pathology Laboratory,SA Path,Oxford Terrace,Port Lincoln,5606,EFNLHN,,,SAPath
 SAPATH-015,Port Pirie Hospital,SA Path,Pathology Laboratory,SA Path,Alexander Street,Port Pirie,5540,YNLHN,,,SAPath
-SAPATH-016,Victor Harbor (South Coast District Hospital),SA Path,Pathology Laboratory,SA Path,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPath
+SAPATH-016,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Path,Pathology Laboratory,SA Path,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPath
 SAPATH-017,Wallaroo Hospital,SA Path,Pathology Laboratory,SA Path,Ernest Terrace,Wallaroo,5556,YNLHN,,,SAPath
 SAPATH-018,Whyalla Hospital,SA Path,Pathology Laboratory,SA Path,Wood Terrace,Whyalla,5600,FUNLHN,,,SAPath
