@@ -670,11 +670,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Victor Harbor",
+        "name": "Victor Harbor Hospital (Southern Fleurieu Health Service)",
         "site_type": "Community dental clinic",
         "service": "SA Dental",
         "lhn_code": "BHFLHN",
-        "address": "South Coast District Hospital, Bay Road",
+        "address": "Harbour View Terrace",
         "suburb": "Victor Harbor",
         "postcode": "5211",
         "phone": "(08) 8551 0460",

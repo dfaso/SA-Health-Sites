@@ -97,12 +97,12 @@
         "organisation": "SA Pathology",
         "site_category": "Pathology",
         "service": "Pathology Laboratory",
-        "address": "Hutchinson Road",
+        "address": "21 Hutchinson Road",
         "suburb": "Gawler",
         "postcode": "5118",
         "state": "SA",
-        "lhn": "Central Adelaide Local Health Network",
-        "lhn_code": "CALHN"
+        "lhn": "Barossa Hills Fleurieu Local Health Network",
+        "lhn_code": "BHFLHN"
       },
       "geometry": {
         "type": "Point",
