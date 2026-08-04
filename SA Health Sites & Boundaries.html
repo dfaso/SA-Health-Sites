@@ -167,9 +167,9 @@
         .site-table-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             gap: 20px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .site-table-header h2 {
@@ -247,8 +247,9 @@
 
         .site-table-actions {
             display: flex;
-            gap: 10px;
             align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
         }
 
         #exportCsvButton {
@@ -377,8 +378,11 @@
         /* Toolbar search */
 
         .toolbar-search {
-            width: 300px;
-            max-width: 100%;
+            width: 320px;
+        }
+
+        .toolbar-search input {
+            width: 100%;
         }
 
         .toolbar-search label {
@@ -560,7 +564,7 @@
 
         .summary-bar {
             display: grid;
-            grid-template-columns: repeat(6, minmax(130px, 1fr));
+            grid-template-columns: repeat(7, minmax(130px, 1fr));
             gap: 12px;
             box-sizing: border-box;
             margin: 15px 25px 0;
@@ -627,6 +631,10 @@
 
         .sapath-dot {
             background-color: #E9E92F;
+        }
+
+        .sapharm-dot {
+            background-color: #ff00dd;
         }
     </style>
 </head>
@@ -709,10 +717,11 @@
                                 <input type="checkbox" data-map-layer="sapath" checked>
                                 SA Pathology
                             </label>
+                            <label>
+                                <input type="checkbox" data-map-layer="sapharm" checked>
+                                SA Pharmacy
+                            </label>
                         </div>
-                    </div>
-                    <div class="toolbar-search">
-                        <input type="search" id="siteSearchInput" placeholder="e.g. Roxby Downs" autocomplete="off">
                     </div>
                     <button id="resetMapButton" type="button" class="toolbar-button">
                         Reset View
@@ -755,6 +764,11 @@
                     <span class="summary-label">SA Pathology</span>
                     <span id="summarySaPath" class="summary-value">0</span>
                 </div>
+                <div class="summary-card">
+                    <span class="summary-dot sapharm-dot"></span>
+                    <span class="summary-label">SA Pharmacy</span>
+                    <span id="summarySaPharm" class="summary-value">0</span>
+                </div>
             </section>
 
             <div class="map-area">
@@ -765,20 +779,34 @@
 
 
             <section id="siteTableSection">
+
                 <div class="site-table-header">
+
                     <div>
                         <h2>Health Sites</h2>
+
                         <p id="siteTableSummary">
                             Loading site data...
                         </p>
                     </div>
 
-                    <button id="exportCsvButton" type="button" class="toolbar-button">
-                        Export CSV
-                    </button>
+                    <div class="site-table-actions">
+
+                        <div class="toolbar-search">
+                            <input type="search" id="siteSearchInput" placeholder="Search by site, suburb, service..."
+                                autocomplete="off">
+                        </div>
+
+                        <button id="exportCsvButton" type="button" class="toolbar-button">
+                            Export CSV
+                        </button>
+
+                    </div>
+
                 </div>
 
                 <div class="site-table-wrapper">
+
                     <table id="siteTable">
                         <thead>
                             <tr>
@@ -792,12 +820,14 @@
                                 <th>LHN</th>
                             </tr>
                         </thead>
+
                         <tbody id="siteTableBody">
                         </tbody>
                     </table>
+
                 </div>
+
             </section>
-        </section>
 
     </main>
 
@@ -828,6 +858,7 @@
         let dentalData = null;
         let dassaData = null;
         let sapathData = null;
+        let sapharmData = null;
 
         let selectedFilter = {
             type: null,
@@ -839,7 +870,8 @@
             "Ambulance",
             "Dental",
             "Dassa",
-            "SA Path"
+            "SA Path",
+            "SA Pharm"
         ]);
 
         // ==================================================
@@ -948,6 +980,42 @@
                     selectTableSiteFromMarker(
                         p,
                         "Hospital"
+                    );
+                });
+            }
+        });
+
+        const sapharm = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#ff00dd",
+                    fillOpacity: 1
+                });
+            },
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                    `<strong>SA Pharm - ${p.name}</strong><br>
+                    ${p.address},<br>
+                    ${p.suburb}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
+
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+
+                    selectTableSiteFromMarker(
+                        p,
+                        "Pharmacy"
                     );
                 });
             }
@@ -1109,6 +1177,7 @@
         dental.addTo(map);
         dassa.addTo(map);
         sapath.addTo(map);
+        sapharm.addTo(map);
 
         function updateMarkerSizes() {
             const zoom = map.getZoom();
@@ -1130,7 +1199,7 @@
                 markerRadius = 7;
                 markerWeight = 2;
             }
-            [hospital, SAAS, dental, dassa, sapath].forEach(function (siteLayer) {
+            [hospital, SAAS, dental, dassa, sapath, sapharm].forEach(function (siteLayer) {
                 siteLayer.eachLayer(function (marker) {
                     if (marker.setRadius) {
                         marker.setRadius(markerRadius);
@@ -1168,6 +1237,7 @@
             dental.clearLayers();
             dassa.clearLayers();
             sapath.clearLayers();
+            sapharm.clearLayers();
 
             if (hospitalData?.features) {
                 hospital.addData({
@@ -1197,6 +1267,12 @@
                 sapath.addData({
                     type: "FeatureCollection",
                     features: sapathData.features.filter(matchesLhn)
+                });
+            }
+            if (sapharmData?.features) {
+                sapharm.addData({
+                    type: "FeatureCollection",
+                    features: sapharmData.features.filter(matchesLhn)
                 });
             }
 
@@ -1327,6 +1403,19 @@
         //==================================================
         // LOAD FROM GITHUB
         //==================================================
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAPharm.geojson")
+            .then(response => response.json())
+            .then(data => {
+                sapharmData = data;
+
+                sapharm.clearLayers();
+                sapharm.addData(sapharmData);
+
+                updateMarkerSizes();
+            })
+            .catch(error => {
+                console.error("Unable to load SA Pharmacy layer:", error);
+            });
 
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/PublicHospitals.geojson")
             .then(response => response.json())
@@ -1483,6 +1572,9 @@
             }
             if (map.hasLayer(sapath)) {
                 visibleSiteCategories.add("SA Path");
+            }
+            if (map.hasLayer(sapharm)) {
+                visibleSiteCategories.add("SA Pharm");
             }
             renderTable();
         }
@@ -1666,7 +1758,8 @@
                 Ambulance: SAAS,
                 Dental: dental,
                 Dassa: dassa,
-                "SA Path": sapath
+                "SA Path": sapath,
+                "SA Pharmm": sapath
             };
 
             const selectedLayer =
@@ -1682,7 +1775,8 @@
                         SAAS,
                         dental,
                         dassa,
-                        sapath
+                        sapath,
+                        sapharm
                     ];
 
             let matchingMarker = null;
@@ -1797,7 +1891,8 @@
                 Ambulance: 0,
                 Dental: 0,
                 Dassa: 0,
-                "SA Path": 0
+                "SA Path": 0,
+                "SA Pharm": 0
             };
 
             filteredSites.forEach(function (site) {
@@ -1833,6 +1928,10 @@
             document.getElementById(
                 "summarySaPath"
             ).textContent = counts["SA Path"];
+
+            document.getElementById(
+                "summarySaPharm"
+            ).textContent = counts["SA Pharm"];
         }
 
         function renderTable() {
@@ -2054,7 +2153,8 @@
             saas: SAAS,
             dental: dental,
             dassa: dassa,
-            sapath: sapath
+            sapath: sapath,
+            sapharm: sapharm
         };
 
         const toolbarBaseMaps = {
@@ -2266,6 +2366,14 @@
                     style="background-color: #E9E92F;"
                 ></span>
                 SA Pathology
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #ff00dd;"
+                ></span>
+                SA Pharmacy
             </div>
 
             <div class="map-legend-section-title">
