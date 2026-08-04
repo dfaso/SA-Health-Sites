@@ -269,3 +269,17 @@ SAPHARM-017,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Pharm,P
 SAPHARM-018,The Queen Elizabeth Hospital (TQEH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,28 Woodville Road,Woodville South,5011,CALHN,,,SAPharm
 SAPHARM-019,Whyalla Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,20 Wood Terrace,Whyalla,5600,FUNLHN,,,SAPharm
 SAPHARM-020,Women's and Children's Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,72 King William Road,North Adelaide,5006,WCHN,,,SAPharm
+SAMI-001,Clare Hospital,SAMI,Medical Imaging,SA Medical Imaging,47 Farrel Flat Road,Clare,5453,YNLHN,,,SAMI
+SAMI-002,Flinders Medical Centre,SAMI,Medical Imaging,SA Medical Imaging,Flinders Drive,Bedford Park,5042,SALHN,,,SAMI
+SAMI-003,"Lyell McEwin Hospital, Nuclear Medicine",SAMI,Medical Imaging,SA Medical Imaging,120-130 Haydown Road,Elizabeth Vale,5112,NALHN,,,SAMI
+SAMI-004,"Lyell McEwin Hospital, Medical Imaging",SAMI,Medical Imaging,SA Medical Imaging,120-130 Haydown Road,Elizabeth Vale,5112,NALHN,,,SAMI
+SAMI-005,Murray Bridge Soldiers’ Memorial Hospital,SAMI,Medical Imaging,SA Medical Imaging,96 Swanport Road,Murray Bridge,5253,RMCLHN,,,SAMI
+SAMI-006,Port Pirie Regional Health Service,SAMI,Medical Imaging,SA Medical Imaging,Alexander Street,Port Pirie,5540,YNLHN,,,SAMI
+SAMI-007,QE Specialist Centre,SAMI,Medical Imaging,SA Medical Imaging,35 Woodville Road,Woodville South,5011,CALHN,,,SAMI
+SAMI-008,Repat Health Precinct,SAMI,Medical Imaging,SA Medical Imaging,216 Daws Road,Daw Park,5041,SALHN,,,SAMI
+SAMI-009,Riverland General Hospital,SAMI,Medical Imaging,SA Medical Imaging,10 Maddern Street,Berri,5343,RMCLHN,,,SAMI
+SAMI-010,"Royal Adelaide Hospital, Medical Imaging",SAMI,Medical Imaging,SA Medical Imaging,Port Road,Adelaide,5000,CALHN,,,SAMI
+SAMI-011,"Royal Adelaide Hospital, Nuclear Medicine",SAMI,Medical Imaging,SA Medical Imaging,Port Road,Adelaide,5000,CALHN,,,SAMI
+SAMI-012,"The Queen Elizabeth Hospital, Medical Imaging ",SAMI,Medical Imaging,SA Medical Imaging,28 Woodville Road,Woodville South,5011,CALHN,,,SAMI
+SAMI-013,"The Queen Elizabeth Hospital, Nuclear Medicine",SAMI,Medical Imaging,SA Medical Imaging,28 Woodville Road,Woodville South,5011,CALHN,,,SAMI
+SAMI-014,Women’s and Children’s Hospital,SAMI,Medical Imaging,SA Medical Imaging,72 King William Road,North Adelaide,5006,WCHN,,,SAMI
