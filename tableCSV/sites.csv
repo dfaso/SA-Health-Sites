@@ -249,23 +249,23 @@ SAPATH-015,Port Pirie Hospital,SA Path,Pathology Laboratory,SA Pathology,Alexand
 SAPATH-016,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Path,Pathology Laboratory,SA Pathology,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPath
 SAPATH-017,Wallaroo Hospital,SA Path,Pathology Laboratory,SA Pathology,Ernest Terrace,Wallaroo,5556,YNLHN,,,SAPath
 SAPATH-018,Whyalla Hospital,SA Path,Pathology Laboratory,SA Pathology,Wood Terrace,Whyalla,5600,FUNLHN,,,SAPath
-SAPHARM-001,Flinders Medical Centre,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Flinders Drive,Bedford Park,5042,,,,SAPharm
-SAPHARM-002,Gawler Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,21 Hutchinson Road,Gawler East,5118,,,,SAPharm
-SAPHARM-003,Glenside Health Campus (Inpatient Rehab Services Building,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,2 Karrayarta Drive,Glenside,5065,,,,SAPharm
-SAPHARM-004,Hampstead Rehabilitation Centre (HRC),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,205-207 Hampstead Road,Lightsview,5085,,,,SAPharm
-SAPHARM-005,Lyell McEwin Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,120-130 Haydown Road,Elizabeth Vale,5112,,,,SAPharm
-SAPHARM-006,Modbury Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Smart Road,Modbury,5092,,,,SAPharm
-SAPHARM-007,Mount Barker District Soilder's Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,87 Wellington Road,Mount Barker,5251,,,,SAPharm
-SAPHARM-008,Mount Gambier Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,276-300 Wehl Street North,Mount Gambier,5290,,,,SAPharm
-SAPHARM-009,Murray Bridge Soldiers' Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,96 Swanport Road,Murray Bridge,5253,,,,SAPharm
-SAPHARM-010,Noarlunga Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Kelly Drive,Noarlunga,5168,,,,SAPharm
-SAPHARM-011,Port Augusta Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,71 Hospital Road,Port Augusta,5700,,,,SAPharm
-SAPHARM-012,Port Lincoln Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,39 Oxford Terrace,Port Lincoln,5606,,,,SAPharm
-SAPHARM-013,Port Pirie Regional Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Street,Port Pirie,5540,,,,SAPharm
-SAPHARM-014,Repat Health Precinct Pharmacy,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,216 Daws Road,Daw Park,5041,,,,SAPharm
-SAPHARM-015,Riverland General Hospital (Berri),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,10 Maddern Street,Berri,5343,,,,SAPharm
-SAPHARM-016,Royal Adelaide Hospital (RAH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Port Road,Adelaide,5000,,,,SAPharm
-SAPHARM-017,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Harbour View Terrace,Victor Harbor,5211,,,,SAPharm
-SAPHARM-018,The Queen Elizabeth Hospital (TQEH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,28 Woodville Road,Woodville South,5011,,,,SAPharm
-SAPHARM-019,Whyalla Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,20 Wood Terrace,Whyalla,5600,,,,SAPharm
-SAPHARM-020,Women's and Children's Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,72 King William Road,North Adelaide,5006,,,,SAPharm
+SAPHARM-001,Flinders Medical Centre,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Flinders Drive,Bedford Park,5042,SALHN,,,SAPharm
+SAPHARM-002,Gawler Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,21 Hutchinson Road,Gawler East,5118,BHFLHN,,,SAPharm
+SAPHARM-003,Glenside Health Campus (Inpatient Rehab Services Building,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,2 Karrayarta Drive,Glenside,5065,CALHN,,,SAPharm
+SAPHARM-004,Hampstead Rehabilitation Centre (HRC),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,205-207 Hampstead Road,Lightsview,5085,NALHN,,,SAPharm
+SAPHARM-005,Lyell McEwin Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,120-130 Haydown Road,Elizabeth Vale,5112,NALHN,,,SAPharm
+SAPHARM-006,Modbury Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Smart Road,Modbury,5092,NALHN,,,SAPharm
+SAPHARM-007,Mount Barker District Soilder's Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,87 Wellington Road,Mount Barker,5251,BHFLHN,,,SAPharm
+SAPHARM-008,Mount Gambier Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,276-300 Wehl Street North,Mount Gambier,5290,LCLHN,,,SAPharm
+SAPHARM-009,Murray Bridge Soldiers' Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,96 Swanport Road,Murray Bridge,5253,RMCLHN,,,SAPharm
+SAPHARM-010,Noarlunga Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Kelly Drive,Noarlunga,5168,SALHN,,,SAPharm
+SAPHARM-011,Port Augusta Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,71 Hospital Road,Port Augusta,5700,FUNLHN,,,SAPharm
+SAPHARM-012,Port Lincoln Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,39 Oxford Terrace,Port Lincoln,5606,EFNLHN,,,SAPharm
+SAPHARM-013,Port Pirie Regional Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Street,Port Pirie,5540,YNLHN,,,SAPharm
+SAPHARM-014,Repat Health Precinct Pharmacy,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,216 Daws Road,Daw Park,5041,SALHN,,,SAPharm
+SAPHARM-015,Riverland General Hospital (Berri),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,10 Maddern Street,Berri,5343,RMCLHN,,,SAPharm
+SAPHARM-016,Royal Adelaide Hospital (RAH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Port Road,Adelaide,5000,CALHN,,,SAPharm
+SAPHARM-017,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPharm
+SAPHARM-018,The Queen Elizabeth Hospital (TQEH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,28 Woodville Road,Woodville South,5011,CALHN,,,SAPharm
+SAPHARM-019,Whyalla Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,20 Wood Terrace,Whyalla,5600,FUNLHN,,,SAPharm
+SAPHARM-020,Women's and Children's Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,72 King William Road,North Adelaide,5006,WCHN,,,SAPharm
