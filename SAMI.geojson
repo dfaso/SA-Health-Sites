@@ -1,0 +1,314 @@
+{
+  "type": "FeatureCollection",
+  "name": "SA_Medical_Imaging_Sites",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clare Hospital",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "47 Farrel Flat Road",
+        "suburb": "Clare",
+        "postcode": "5453",
+        "state": "SA",
+        "lhn": "Yorke and Northern Local Health Network",
+        "lhn_code": "YNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.61427293939082,
+          -33.829459486757315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flinders Medical Centre",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "Flinders Drive",
+        "suburb": "Bedford Park",
+        "postcode": "5042",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.5690117484482, 
+          -35.02044601584472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lyell McEwin Hospital, Nuclear Medicine",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "120-130 Haydown Road",
+        "suburb": "Elizabeth Vale",
+        "postcode": "5112",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.66448721070753,
+          -34.74777584702873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lyell McEwin Hospital, Medical Imaging",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "120-130 Haydown Road",
+        "suburb": "Elizabeth Vale",
+        "postcode": "5112",
+        "state": "SA",
+        "lhn": "Northern Adelaide Local Health Network",
+        "lhn_code": "NALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6638428908962,
+          -34.74728049932887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murray Bridge Soldiers’ Memorial Hospital",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "96 Swanport Road",
+        "suburb": "Murray Bridge",
+        "postcode": "5253",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.2802787758946,
+          -35.128869207583584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Pirie Regional Health Service",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "Alexander Street",
+        "suburb": "Port Pirie",
+        "postcode": "5540",
+        "state": "SA",
+        "lhn": "Yorke and Northern Local Health Network",
+        "lhn_code": "YNLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.00436853129847,
+          -33.17709701360713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "QE Specialist Centre",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "35 Woodville Road",
+        "suburb": "Woodville South",
+        "postcode": "5011",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.53325738210125,
+          -34.88276364040997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Repat Health Precinct",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "216 Daws Road",
+        "suburb": "Daw Park",
+        "postcode": "5041",
+        "state": "SA",
+        "lhn": "Southern Adelaide Local Health Network",
+        "lhn_code": "SALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.5887888904817,
+          -34.99069830313013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverland General Hospital",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "10 Maddern Street",
+        "suburb": "Berri",
+        "postcode": "5343",
+        "state": "SA",
+        "lhn": "Riverland Mallee Coorong Local Health Network",
+        "lhn_code": "RMCLHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.60166117873797,
+          -34.27610082941902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Royal Adelaide Hospital, Medical Imaging",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "Port Road",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.58646215973988,
+          -34.9209478447778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Royal Adelaide Hospital, Nuclear Medicine",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "Port Road",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.58772150757017,
+          -34.921097135191374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Queen Elizabeth Hospital, Medical Imaging ",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "28 Woodville Road",
+        "suburb": "Woodville South",
+        "postcode": "5011",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.53370874575322,
+          -34.88349995021482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Queen Elizabeth Hospital, Nuclear Medicine",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "28 Woodville Road",
+        "suburb": "Woodville South",
+        "postcode": "5011",
+        "state": "SA",
+        "lhn": "Central Adelaide Local Health Network",
+        "lhn_code": "CALHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.53318267362766,
+          -34.883576828906435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Women’s and Children’s Hospital",
+        "organisation": "SA Medical Imaging",
+        "site_category": "Imaging",
+        "service": "Medical Imaging",
+        "address": "72 King William Road",
+        "suburb": "North Adelaide",
+        "postcode": "5006",
+        "state": "SA",
+        "lhn": "Women's and Children's Health Network",
+        "lhn_code": "WCHN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.59986334675008,
+          -34.911658163462484
+        ]
+      }
+    }
+  ]
+}
