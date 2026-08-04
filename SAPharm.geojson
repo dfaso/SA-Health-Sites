@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "SA_Pathology_Sites",
+  "name": "SA_Pharmacy_Sites",
   "features": [
     {
       "type": "Feature",
@@ -437,8 +437,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.59868131329245,
-          -34.9111744470409
+          138.60018299180598,
+          -34.91193980185525
 ]
       }
     }

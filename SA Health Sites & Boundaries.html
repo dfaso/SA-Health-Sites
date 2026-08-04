@@ -564,7 +564,7 @@
 
         .summary-bar {
             display: grid;
-            grid-template-columns: repeat(7, minmax(130px, 1fr));
+            grid-template-columns: repeat(8, minmax(120px, 1fr));
             gap: 12px;
             box-sizing: border-box;
             margin: 15px 25px 0;
@@ -635,6 +635,10 @@
 
         .sapharm-dot {
             background-color: #ff00dd;
+        }
+
+        .sami-dot {
+            background-color: #00f7ff;
         }
     </style>
 </head>
@@ -721,6 +725,10 @@
                                 <input type="checkbox" data-map-layer="sapharm" checked>
                                 SA Pharmacy
                             </label>
+                            <label>
+                                <input type="checkbox" data-map-layer="sami" checked>
+                                SA Medical Imaging
+                            </label>
                         </div>
                     </div>
                     <button id="resetMapButton" type="button" class="toolbar-button">
@@ -768,6 +776,11 @@
                     <span class="summary-dot sapharm-dot"></span>
                     <span class="summary-label">SA Pharmacy</span>
                     <span id="summarySaPharm" class="summary-value">0</span>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-dot sami-dot"></span>
+                    <span class="summary-label">SA Medical Imaging</span>
+                    <span id="summarySami" class="summary-value">0</span>
                 </div>
             </section>
 
@@ -859,6 +872,7 @@
         let dassaData = null;
         let sapathData = null;
         let sapharmData = null;
+        let samiData = null;
 
         let selectedFilter = {
             type: null,
@@ -871,7 +885,8 @@
             "Dental",
             "Dassa",
             "SA Path",
-            "SA Pharm"
+            "SA Pharm",
+            "SAMI"
         ]);
 
         // ==================================================
@@ -980,6 +995,42 @@
                     selectTableSiteFromMarker(
                         p,
                         "Hospital"
+                    );
+                });
+            }
+        });
+
+        const sami = L.geoJSON(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "sitePane",
+                    radius: 7,
+                    color: "#ffffff",
+                    weight: 2,
+                    fillColor: "#00f7ff",
+                    fillOpacity: 1
+                });
+            },
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+                layer.bindTooltip(
+                    `<strong>SAMI - ${p.name}</strong><br>
+                    ${p.address},<br>
+                    ${p.suburb}`,
+                    {
+                        sticky: true
+                    }
+                );
+                layer.on("click", function () {
+
+                    map.setView(
+                        layer.getLatLng(),
+                        15
+                    );
+
+                    selectTableSiteFromMarker(
+                        p,
+                        "SAMI"
                     );
                 });
             }
@@ -1178,6 +1229,7 @@
         dassa.addTo(map);
         sapath.addTo(map);
         sapharm.addTo(map);
+        sami.addTo(map);
 
         function updateMarkerSizes() {
             const zoom = map.getZoom();
@@ -1199,7 +1251,7 @@
                 markerRadius = 7;
                 markerWeight = 2;
             }
-            [hospital, SAAS, dental, dassa, sapath, sapharm].forEach(function (siteLayer) {
+            [hospital, SAAS, dental, dassa, sapath, sapharm, sami].forEach(function (siteLayer) {
                 siteLayer.eachLayer(function (marker) {
                     if (marker.setRadius) {
                         marker.setRadius(markerRadius);
@@ -1238,6 +1290,7 @@
             dassa.clearLayers();
             sapath.clearLayers();
             sapharm.clearLayers();
+            sami.clearLayers();
 
             if (hospitalData?.features) {
                 hospital.addData({
@@ -1273,6 +1326,12 @@
                 sapharm.addData({
                     type: "FeatureCollection",
                     features: sapharmData.features.filter(matchesLhn)
+                });
+            }
+            if (samiData?.features) {
+                sami.addData({
+                    type: "FeatureCollection",
+                    features: samiData.features.filter(matchesLhn)
                 });
             }
 
@@ -1403,6 +1462,20 @@
         //==================================================
         // LOAD FROM GITHUB
         //==================================================
+        fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAMI.geojson")
+            .then(response => response.json())
+            .then(data => {
+                samiData = data;
+
+                sami.clearLayers();
+                sami.addData(samiData);
+
+                updateMarkerSizes();
+            })
+            .catch(error => {
+                console.error("Unable to load SA Medical Imaging layer:", error);
+            });
+
         fetch("https://raw.githubusercontent.com/dfaso/SA-Health-Sites/main/SAPharm.geojson")
             .then(response => response.json())
             .then(data => {
@@ -1575,6 +1648,9 @@
             }
             if (map.hasLayer(sapharm)) {
                 visibleSiteCategories.add("SA Pharm");
+            }
+            if (map.hasLayer(sami)) {
+                visibleSiteCategories.add("SAMI");
             }
             renderTable();
         }
@@ -1759,7 +1835,8 @@
                 Dental: dental,
                 Dassa: dassa,
                 "SA Path": sapath,
-                "SA Pharmm": sapath
+                "SA Pharmm": sapath,
+                SAMI: sami
             };
 
             const selectedLayer =
@@ -1776,7 +1853,8 @@
                         dental,
                         dassa,
                         sapath,
-                        sapharm
+                        sapharm,
+                        sami
                     ];
 
             let matchingMarker = null;
@@ -1892,7 +1970,8 @@
                 Dental: 0,
                 Dassa: 0,
                 "SA Path": 0,
-                "SA Pharm": 0
+                "SA Pharm": 0,
+                SAMI: 0
             };
 
             filteredSites.forEach(function (site) {
@@ -1932,6 +2011,10 @@
             document.getElementById(
                 "summarySaPharm"
             ).textContent = counts["SA Pharm"];
+
+            document.getElementById(
+                "summarySami"
+            ).textContent = counts["SAMI"];
         }
 
         function renderTable() {
@@ -2154,7 +2237,8 @@
             dental: dental,
             dassa: dassa,
             sapath: sapath,
-            sapharm: sapharm
+            sapharm: sapharm,
+            sami: sami
         };
 
         const toolbarBaseMaps = {
@@ -2374,6 +2458,14 @@
                     style="background-color: #ff00dd;"
                 ></span>
                 SA Pharmacy
+            </div>
+
+            <div class="map-legend-item">
+                <span
+                    class="map-legend-marker"
+                    style="background-color: #00f7ff;"
+                ></span>
+                SAMI
             </div>
 
             <div class="map-legend-section-title">
