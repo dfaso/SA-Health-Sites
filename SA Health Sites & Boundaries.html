@@ -640,6 +640,78 @@
         .sami-dot {
             background-color: #00f7ff;
         }
+
+/* ==================================================
+   WORK IN PROGRESS BANNER
+================================================== */
+
+.wip-banner {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff4d6;
+    border-bottom: 1px solid #e2b84b;
+    color: #3d3215;
+    transition:
+        max-height 0.35s ease,
+        padding 0.35s ease;
+    position: relative;
+    z-index: 2500;
+}
+
+.wip-banner.visible {
+    max-height: 180px;
+}
+
+.wip-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 14px 24px;
+}
+
+.wip-banner strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.wip-banner p {
+    margin: 0;
+    max-width: 1000px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.wip-banner-close {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #c89e37;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #3d3215;
+    font-size: 22px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.wip-banner-close:hover {
+    background-color: #f1d98f;
+}
+
+@media (max-width: 700px) {
+    .wip-banner-content {
+        padding: 12px 15px;
+    }
+
+    .wip-banner.visible {
+        max-height: 240px;
+    }
+}
+
     </style>
 </head>
 
@@ -655,6 +727,35 @@
             <p>Health sites and service locations</p>
         </div>
     </header>
+
+    <!-- ==================================================
+         WIP Header
+    =================================================== -->
+
+<div id="wipBanner" class="wip-banner" role="status">
+    <div class="wip-banner-content">
+        <div>
+            <strong>Work in Progress</strong>
+
+            <p>
+                This application is currently under development and is being
+                shared for early review and feedback. Some data, features and
+                functionality are still being refined and should not yet be
+                considered final.
+            </p>
+        </div>
+
+        <button
+            id="dismissWipBanner"
+            type="button"
+            class="wip-banner-close"
+            aria-label="Dismiss work in progress message"
+        >
+            ×
+        </button>
+    </div>
+</div>
+
 
     <!-- ==================================================
          APPLICATION
@@ -2577,6 +2678,31 @@
                 resetMapView();
             }, 300);
         });
+
+// ==================================================
+// WORK IN PROGRESS BANNER
+// ==================================================
+
+const wipBanner =
+    document.getElementById("wipBanner");
+
+const dismissWipBannerButton =
+    document.getElementById("dismissWipBanner");
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        wipBanner.classList.add("visible");
+    }, 250);
+});
+
+dismissWipBannerButton.addEventListener(
+    "click",
+    function () {
+        wipBanner.classList.remove("visible");
+    }
+);
+
+
 
         // ==================================================
         // BROWSER WINDOW RESIZING
