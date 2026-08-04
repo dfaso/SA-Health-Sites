@@ -231,21 +231,41 @@ SAAS-701,UPPER MURRAY MALLEE VOLUNTEER REGIONA RESPONSE TEAM,Ambulance,AMBULANCE
 DASSA-001,DASSA Central Services,Dassa,Drug and Alcohol Service,Drug and Alcohol Service South Australia,91 Magill Road,Stepney,5069,CALHN,Operating,(08) 7425 5000,DASSA
 DASSA-002,DASSA Northern Services,Dassa,Drug and Alcohol Service,Drug and Alcohol Service South Australia,22 Langford Drive,Elizabeth,5112,NALHN,Operating,(08) 7485 4600,DASSA
 DASSA-003,DASSA Southern Services,Dassa,Drug and Alcohol Service,Drug and Alcohol Service South Australia,1/209 Main South Rd,Morphett Vale,5162,SALHN,Operating,(08) 8325 8111,DASSA
-SAPATH-001,Adelaide (SA Pathology Laboratory),SA Path,Pathology Laboratory,SA Path,Frome Road,Adelaide,5000,CALHN,,,SAPath
-SAPATH-002,Adelaide (Royal Adelaide Hospital),SA Path,Pathology Laboratory,SA Path,"Level 3H, Port Road",Adelaide,5000,CALHN,,,SAPath
-SAPATH-003,Bedford Park (Flinders Medical Centre),SA Path,Pathology Laboratory,SA Path,"Level 6, Room 6D101, Flinders Drive",Bedford Park,5042,SALHN,,,SAPath
-SAPATH-004,Elizabeth Vale (Lyell McEwin Health Service),SA Path,Pathology Laboratory,SA Path,Haydown Road,Elizabeth Vale,5112,NALHN,,,SAPath
-SAPATH-005,Gawler Health Service,SA Path,Pathology Laboratory,SA Path,21 Hutchinson Road,Gawler,5118,BHFLHN,,,SAPath
-SAPATH-006,Modbury Hospital,SA Path,Pathology Laboratory,SA Path,Smart Road,Modbury,5092,NALHN,,,SAPath
-SAPATH-007,Noarlunga Health Service,SA Path,Pathology Laboratory,SA Path,Alexander Kelly Drive,Noarlunga,5168,SALHN,,,SAPath
-SAPATH-008,North Adelaide (Women's and Children's Hospital),SA Path,Pathology Laboratory,SA Path,"4th floor Rieger Building, King William Road (via Kermode Street Main Entrance)",North Adelaide,5006,WCHN,,,SAPath
-SAPATH-009,Woodville (The Queen Elizabeth Hospital),SA Path,Pathology Laboratory,SA Path,28 Woodville Road,Woodville,5011,CALHN,,,SAPath
-SAPATH-010,Berri Hospital,SA Path,Pathology Laboratory,SA Path,Maddern Avenue,Berri,5343,RMCLHN,,,SAPath
-SAPATH-011,Mount Gambier Hospital,SA Path,Pathology Laboratory,SA Path,Wehl Street North,Mount Gambier,5290,LCLHN,,,SAPath
-SAPATH-012,Murray Bridge Hospital,SA Path,Pathology Laboratory,SA Path,Swanport Road,Murray Bridge,5253,RMCLHN,,,SAPath
-SAPATH-013,Port Augusta Hospital,SA Path,Pathology Laboratory,SA Path,Hospital Road,Port Augusta,5700,FUNLHN,,,SAPath
-SAPATH-014,Port Lincoln Hospital,SA Path,Pathology Laboratory,SA Path,Oxford Terrace,Port Lincoln,5606,EFNLHN,,,SAPath
-SAPATH-015,Port Pirie Hospital,SA Path,Pathology Laboratory,SA Path,Alexander Street,Port Pirie,5540,YNLHN,,,SAPath
-SAPATH-016,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Path,Pathology Laboratory,SA Path,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPath
-SAPATH-017,Wallaroo Hospital,SA Path,Pathology Laboratory,SA Path,Ernest Terrace,Wallaroo,5556,YNLHN,,,SAPath
-SAPATH-018,Whyalla Hospital,SA Path,Pathology Laboratory,SA Path,Wood Terrace,Whyalla,5600,FUNLHN,,,SAPath
+SAPATH-001,Adelaide (SA Pathology Laboratory),SA Path,Pathology Laboratory,SA Pathology,Frome Road,Adelaide,5000,CALHN,,,SAPath
+SAPATH-002,Adelaide (Royal Adelaide Hospital),SA Path,Pathology Laboratory,SA Pathology,"Level 3H, Port Road",Adelaide,5000,CALHN,,,SAPath
+SAPATH-003,Bedford Park (Flinders Medical Centre),SA Path,Pathology Laboratory,SA Pathology,"Level 6, Room 6D101, Flinders Drive",Bedford Park,5042,SALHN,,,SAPath
+SAPATH-004,Elizabeth Vale (Lyell McEwin Health Service),SA Path,Pathology Laboratory,SA Pathology,Haydown Road,Elizabeth Vale,5112,NALHN,,,SAPath
+SAPATH-005,Gawler Health Service,SA Path,Pathology Laboratory,SA Pathology,21 Hutchinson Road,Gawler,5118,BHFLHN,,,SAPath
+SAPATH-006,Modbury Hospital,SA Path,Pathology Laboratory,SA Pathology,Smart Road,Modbury,5092,NALHN,,,SAPath
+SAPATH-007,Noarlunga Health Service,SA Path,Pathology Laboratory,SA Pathology,Alexander Kelly Drive,Noarlunga,5168,SALHN,,,SAPath
+SAPATH-008,North Adelaide (Women's and Children's Hospital),SA Path,Pathology Laboratory,SA Pathology,"4th floor Rieger Building, King William Road (via Kermode Street Main Entrance)",North Adelaide,5006,WCHN,,,SAPath
+SAPATH-009,Woodville (The Queen Elizabeth Hospital),SA Path,Pathology Laboratory,SA Pathology,28 Woodville Road,Woodville,5011,CALHN,,,SAPath
+SAPATH-010,Berri Hospital,SA Path,Pathology Laboratory,SA Pathology,Maddern Avenue,Berri,5343,RMCLHN,,,SAPath
+SAPATH-011,Mount Gambier Hospital,SA Path,Pathology Laboratory,SA Pathology,Wehl Street North,Mount Gambier,5290,LCLHN,,,SAPath
+SAPATH-012,Murray Bridge Hospital,SA Path,Pathology Laboratory,SA Pathology,Swanport Road,Murray Bridge,5253,RMCLHN,,,SAPath
+SAPATH-013,Port Augusta Hospital,SA Path,Pathology Laboratory,SA Pathology,Hospital Road,Port Augusta,5700,FUNLHN,,,SAPath
+SAPATH-014,Port Lincoln Hospital,SA Path,Pathology Laboratory,SA Pathology,Oxford Terrace,Port Lincoln,5606,EFNLHN,,,SAPath
+SAPATH-015,Port Pirie Hospital,SA Path,Pathology Laboratory,SA Pathology,Alexander Street,Port Pirie,5540,YNLHN,,,SAPath
+SAPATH-016,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Path,Pathology Laboratory,SA Pathology,Harbour View Terrace,Victor Harbor,5211,BHFLHN,,,SAPath
+SAPATH-017,Wallaroo Hospital,SA Path,Pathology Laboratory,SA Pathology,Ernest Terrace,Wallaroo,5556,YNLHN,,,SAPath
+SAPATH-018,Whyalla Hospital,SA Path,Pathology Laboratory,SA Pathology,Wood Terrace,Whyalla,5600,FUNLHN,,,SAPath
+SAPHARM-001,Flinders Medical Centre,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Flinders Drive,Bedford Park,5042,,,,SAPharm
+SAPHARM-002,Gawler Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,21 Hutchinson Road,Gawler East,5118,,,,SAPharm
+SAPHARM-003,Glenside Health Campus (Inpatient Rehab Services Building,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,2 Karrayarta Drive,Glenside,5065,,,,SAPharm
+SAPHARM-004,Hampstead Rehabilitation Centre (HRC),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,205-207 Hampstead Road,Lightsview,5085,,,,SAPharm
+SAPHARM-005,Lyell McEwin Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,120-130 Haydown Road,Elizabeth Vale,5112,,,,SAPharm
+SAPHARM-006,Modbury Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Smart Road,Modbury,5092,,,,SAPharm
+SAPHARM-007,Mount Barker District Soilder's Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,87 Wellington Road,Mount Barker,5251,,,,SAPharm
+SAPHARM-008,Mount Gambier Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,276-300 Wehl Street North,Mount Gambier,5290,,,,SAPharm
+SAPHARM-009,Murray Bridge Soldiers' Memorial Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,96 Swanport Road,Murray Bridge,5253,,,,SAPharm
+SAPHARM-010,Noarlunga Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Kelly Drive,Noarlunga,5168,,,,SAPharm
+SAPHARM-011,Port Augusta Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,71 Hospital Road,Port Augusta,5700,,,,SAPharm
+SAPHARM-012,Port Lincoln Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,39 Oxford Terrace,Port Lincoln,5606,,,,SAPharm
+SAPHARM-013,Port Pirie Regional Health Service,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Alexander Street,Port Pirie,5540,,,,SAPharm
+SAPHARM-014,Repat Health Precinct Pharmacy,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,216 Daws Road,Daw Park,5041,,,,SAPharm
+SAPHARM-015,Riverland General Hospital (Berri),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,10 Maddern Street,Berri,5343,,,,SAPharm
+SAPHARM-016,Royal Adelaide Hospital (RAH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Port Road,Adelaide,5000,,,,SAPharm
+SAPHARM-017,Victor Harbor Hospital (Southern Fleurieu Health Service),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,Harbour View Terrace,Victor Harbor,5211,,,,SAPharm
+SAPHARM-018,The Queen Elizabeth Hospital (TQEH),SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,28 Woodville Road,Woodville South,5011,,,,SAPharm
+SAPHARM-019,Whyalla Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,20 Wood Terrace,Whyalla,5600,,,,SAPharm
+SAPHARM-020,Women's and Children's Hospital,SA Pharm,Pharmacy - Site Dispensary,SA Pharmacy,72 King William Road,North Adelaide,5006,,,,SAPharm
